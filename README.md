@@ -20,8 +20,8 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/)
 
 # Gekozen use case: 
-4. Online foto album
-"Ik wil een serie foto's van mijn vakantie kunnen bekijken, ik wil nieuwe foto's aan de serie kunnen toevoegen en een selectie in een carrousel kunnen bekijken."
+**Nerdy T-shirt**
+Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, opslaan, bestellen, en een volgende keer dat ik de site bezoek kunnen gebruiken.
 
 ## Wireflow
 
