@@ -6,11 +6,11 @@
 
 In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement is en hoe je dit kan toepassen om goede, robuuste, toegankelijke websites te maken. Voor iedereen. Het web is voor iedereen, in dit vak leer je hoe je daarvoor kan zorgen.
 
-## Opdrachten
+<!-- ## Opdrachten
 
-het vak bestaat uit 3 opdrachten. In week 1 werken we aan opdracht 1 en 2. Vanaf week 2 werken we aan de eindopdracht.
+het vak bestaat uit 3 opdrachten. In week 1 werken we aan opdracht 1 en 2. Vanaf week 2 werken we aan de eindopdracht. -->
 
-### Opdracht 1 🛹 NPM install Progressive- enhancement
+<!-- ### Opdracht 1 🛹 NPM install Progressive- enhancement
 
 Voor de eerste opdracht gaan we onderzoeken wat Progressive Enhancement is.
 
@@ -20,14 +20,13 @@ Voor de eerste opdracht gaan we onderzoeken wat Progressive Enhancement is.
 
 Voor opdracht 2 ga je proberen het Web te laten 'breken' door (browser) features bewust uit te zetten. Wat gebeurt er als images, custom fonts, JavaScript, kleur, breedband internet niet optimaal werken? 
 
-- [Opdracht 2 - Breek het Web](course/Opdracht2.md)
+- [Opdracht 2 - Breek het Web](course/Opdracht2.md) -->
 
 ### De eindopdracht ✨ Progressive Enhanced Browser Technologie
 
 Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het principe van Progressive Enhancement. Zorg dat alle gebruikers, met alle browsers, in iedere context de toepassing zo goed mogelijk te zien, horen en/of voelen krijgen. De meest 'enhanced' versie is 'delightful UX', mooi en prettig om te gebruiken.
 
 - [De eindopdracht - Progressive Enhanced Browser Technologie](course/Eindopdracht.md)
-
 
 ### Leerdoelen
 - _je leert wat Progressive enhancement is en hoe je dit kan toepassen._
@@ -36,7 +35,12 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 
 [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/)
 
-## Planning & programma
+### Gekozen use case: 
+
+4. Online foto album
+
+
+<!-- ## Planning & programma
 
 | Planning  | Woensdag  |  Donderdag | Vrijdag  |
 |---|---|---|---|
@@ -193,7 +197,7 @@ In week 4 wordt de eindopdracht beoordeeld. Dan gaan we je werk bekijken, bespre
 
 | Donderdag 1/4 | Wat  |
 |---|---|
-| 14:00 | [Weekly Nerd 2️⃣](https://github.com/cmda-minor-web/weekly-nerd-2021)|
+| 14:00 | [Weekly Nerd 2️⃣](https://github.com/cmda-minor-web/weekly-nerd-2021)| -->
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
