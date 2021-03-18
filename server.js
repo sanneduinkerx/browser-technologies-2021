@@ -16,7 +16,7 @@ app.get('/', function(req, res){
 
 app.get('/shirtMaker', function(req, res){ 
     res.render('form');
-}); 
+});  
 
 // Start the Express server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}!`)) 
