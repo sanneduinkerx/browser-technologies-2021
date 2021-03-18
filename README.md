@@ -10,7 +10,7 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 
 Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het principe van Progressive Enhancement. Zorg dat alle gebruikers, met alle browsers, in iedere context de toepassing zo goed mogelijk te zien, horen en/of voelen krijgen. De meest 'enhanced' versie is 'delightful UX', mooi en prettig om te gebruiken.
 
-- [De eindopdracht - Progressive Enhanced Browser Technologie](https://github.com/cmda-minor-web/browser-technologies-2021/blob/master/course/Eindopdracht.md)
+- [De eindopdracht - Progressive Enhanced Browser Technologie](https://github.com/cmda-minor-web/browser-technologies-2021/blob/master/course/Eindopdracht.md) 
 
 ### Leerdoelen
 - _je leert wat Progressive enhancement is en hoe je dit kan toepassen._
