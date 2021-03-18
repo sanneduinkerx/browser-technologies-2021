@@ -3,7 +3,7 @@
 const express = require('express')
 // Create Express app
 const app = express()
-var PORT = 8081; 
+var PORT = process.env.PORT || 8081; 
 
 app.use(express.static('public'))
 // setting ejs as the view engine
