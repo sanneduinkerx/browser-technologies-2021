@@ -1,3 +1,86 @@
+/* custom properties */
+
+:root{
+
+    /* color */
+    --prime-color-1: #663399;
+    --prime-color-2: white;
+    --prime-color-3: black;
+
+    /* font */
+    --bold: 700;
+    --regular-size: 12px;
+    --medium-size: 16px;
+    --big-size: 24px;
+
+    /* sizes */
+    --width-form: 780px;
+    --img-width: 200px;
+    --img-height: 100px;
+
+    /* other */
+    --box-shadow:  5px 5px 0px black;
+}
+
+/***********************************/
+/************** BASICS **************/
+/*********************************/
+
 body{
-    background-color: beige;
+    background-color: var(--prime-color-1);
+    font-family: 'Space Mono', monospace;
+    color:var(--prime-color-2);
+}
+
+p{
+    font-family: 'Space Mono', monospace;
+}
+
+/* Logo nerdy shirt maker */
+
+#logoSite{
+    width: calc(var(--img-width)/2);
+    height: var(--img-height);
+}
+
+/********************************************/
+/************** SHIRT SECTION **************/
+/******************************************/
+
+
+/***********************************/
+/************** FORM **************/
+/*********************************/
+
+fieldset{
+    background-color: var(--prime-color-2);
+    max-width: var(--width-form);
+    color: var(--prime-color-3);
+    border: none;
+}
+
+fieldset legend{
+    font-weight: var(--bold);
+}
+
+fieldset div input[type=text], fieldset div input[type=email]  {
+    display: block;
+}
+
+/* Logo sizes - img on shirt */
+form fieldset div:nth-of-type(3) img{
+    width: var(--img-width);
+    height: var(--img-height);
+}
+
+/* styling button */
+
+form button {
+    border: var(--prime-color-3) solid 2px;
+    padding: .1em 2em;
+    box-shadow: var(--box-shadow);
+}
+
+form button p{
+    font-size: var(--medium-size);
 }

@@ -1,0 +1,126 @@
+<%- include('./partials/head.ejs'); %> 
+<body>
+
+         <!-- icon nerdy shirt maker  -->
+         <!-- deed eerst een img png logo maar omdat het wit was en als je dan css uitzet zag je het icon niet bij svg wordt het dan zwart -->
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.94 67.43" width="100px" height="100px">
+            <defs>
+                <style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#fff;}</style>
+            </defs>
+            <path class="cls-1" d="M9,21c0,28.05,8,50.76,17.87,50.76S44.74,49,44.78,21Z" transform="translate(-6.62 -15.57)"/>
+            <ellipse class="cls-2" cx="22.54" cy="33.85" rx="3.09" ry="12.78"/>
+            <rect class="cls-2" width="41.48" height="5.76"/>
+            <path class="cls-1" d="M90.69,21c0,28.05-8,50.76-17.87,50.76S55,49,55,21Z" transform="translate(-6.62 -15.57)"/>
+            <ellipse class="cls-2" cx="63.95" cy="33.85" rx="3.09" ry="12.78"/>
+            <rect class="cls-2" x="52.08" y="15.57" width="41.48" height="5.76" transform="translate(139.02 21.33) rotate(-180)"/>
+            <path class="cls-1" d="M43.69,76.45c1.46,4.12,5.29,6.26,8.49,5.34,3.46-1,4.63-5.11,4.69-5.34" transform="translate(-6.62 -15.57)"/>
+        
+        </svg>
+        <h1>Let's Start!</h1>
+
+        <section>
+            <h2>Jouw Shirt</h2>
+            <!-- svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="200px">
+                <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
+                <defs>
+                    <style>.shirtColor{fill:#fff;stroke:#000;stroke-miterlimit:10;}</style>
+                </defs>
+                <g id="Shirt-Uiterlijk" data-name="Shirt Uiterlijk">
+                    <path class="shirtColor" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
+                </g>
+            </svg>
+            <a href="">Voeg nog een shirt toe</a>
+        </section>
+
+        <form action="" method="post" id="shirtMaker">
+
+            <fieldset>
+                <legend> Ontwerp T-Shirt</legend>
+
+                <div>
+                    <p>Kies je kleur</p>
+                    <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
+
+                    <input type="radio" id="black" name="color" value="black">
+                    <label for="black">Zwart</label>
+    
+                    <input type="radio" id="white" name="color" value="white">
+                    <label for="white">Wit</label>
+                    
+                    <input type="radio" id="red" name="color" value="red">
+                    <label for="red">Rood</label>
+    
+                    <input type="radio" id="green" name="color" value="green">
+                    <label for="green">Groen</label>
+    
+                    <input type="radio" id="blue" name="color" value="blue">
+                    <label for="blue">Blauw</label>
+    
+                    <input type="radio" id="purple" name="color" value="purple">
+                    <label for="purple">Paars</label>
+                </div>
+               
+                <div>
+                    <label for="text">Wat voor tekst wil je op het Shirt?</label>
+                    <input type="text" id="text" name="TshirtText" required maxlength="25" size="25">
+                    <p><i>Bv. I'm not doing 'Get Help'</i></p>
+                </div>
+
+                <div>
+                    <p>Voeg een afbeelding toe (optioneel)</p>
+
+                    <input type="radio" id="marvel" name="fanBaseImg" value="marvel">
+                    <!-- image source: https://commons.wikimedia.org/wiki/File:Marvel-Comics-Logo.svg -->
+                    <label for="marvel"><img src="/img/marvelLogo.png" alt="Marvel Universe rode logo"></label>
+
+                    <input type="radio" id="HarryPotter" name="fanBaseImg" value="HarryPotter">
+                    <!-- image source: https://1000merken.com/harry-potter-logo/ -->
+                    <label for="HarryPotter"><img src="/img/Harry-Potter-Logo.png" alt="Harry Potter Logo"></label>
+
+                    <input type="radio" id="StarWars" name="fanBaseImg" value="StarWars">
+                    <!-- image source: https://1000logos.net/star-wars-logo/ -->
+                    <label for="StarWars"><img src="/img/StarWars-Logo.png" alt="Star Wars Logo"></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend> Maat Shirt </legend>
+
+                <div>
+                    <p>Voor wie is het t-shirt?</p>
+
+                    <input type="radio" id="female" name="type" value="female">
+                    <label for="female">Vrouw</label>
+    
+                    <input type="radio" id="male" name="type" value="male">
+                    <label for="male">Man</label>
+                </div>
+
+                <div>
+                    <p>Wat is de maat voor het shirt?</p>
+                    <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
+                    
+                    <input type="radio" id="extrasmall" name="size" value="extrasmall">
+                    <label for="extrasmall">XS</label>
+                    
+                    <input type="radio" id="small" name="size" value="small">
+                    <label for="small">S</label>
+    
+                    <input type="radio" id="medium" name="size" value="medium">
+                    <label for="medium">M</label>
+
+                    <input type="radio" id="large" name="size" value="large">
+                    <label for="large">L</label>
+
+                    <input type="radio" id="extralarge" name="size" value="extralarge">
+                    <label for="extralarge">XL</label>
+                </div>
+
+            </fieldset>
+
+            <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Verder</p></button>
+
+        </form>
+</body>
+</html>
