@@ -1,42 +1,48 @@
 <%- include('./partials/head.ejs'); %> 
 <body>
 
+    <%- include('./partials/header.ejs'); %> 
+
         <h1>Persoonlijke Gegevens</h1>
 
-        <section>
-            <h2>Overzicht</h2>
-            <!-- svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="200px">
-                <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
-                <defs>
-                    <style>.cls-1{fill:#fff;stroke:#000;stroke-miterlimit:10;}</style>
-                </defs>
-                <g id="Shirt-Uiterlijk" data-name="Shirt Uiterlijk">
-                    <path class="cls-1" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
-                </g>
-            </svg>
-        </section>
-
-        <form action="" method="post" id="info">
-
-            <fieldset>
-                <legend> Gegevens</legend>
-
-                <div>
-                    <label for="text">Wat is jouw naam?</label>
-                    <input type="text" id="text" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
-                    <input type="text" id="text" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
-                </div>
-
-                <div>
-                    <label for="email">Wat is je E-mail</label>
-                    <input type="email" id="email" name="userMail">
-                </div>
-
-            </fieldset>
-
-            <button type="submit" form="info" value="Submit" id="submitButton"> <p>Opslaan</p></button>
-
-        </form>
+        <main class="formLayout">
+            <section>
+                <h2>Overzicht</h2>
+                <!-- svg -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="200px">
+                    <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
+                    <defs>
+                        <style>.shirtUiterlijk{fill:#fff;stroke:#000;stroke-miterlimit:10;}</style>
+                    </defs>
+                    <g id="Shirt-Uiterlijk" data-name="Shirt Uiterlijk">
+                        <path class="shirtUiterlijk" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
+                    </g>
+                </svg>
+            </section>
+    
+    
+            <form action="" method="post" id="info">
+    
+                <fieldset>
+                    <legend> Gegevens</legend>
+    
+                    <div>
+                        <label for="text">Wat is jouw naam?</label>
+                        <input type="text" id="text" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
+                        <input type="text" id="text" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
+                    </div>
+    
+                    <div>
+                        <label for="email">Wat is je E-mail</label>
+                        <input type="email" id="email" name="userMail">
+                    </div>
+    
+                </fieldset>
+    
+                <button type="submit" form="info" value="Submit" id="submitButton"> <p>Opslaan</p></button>
+    
+            </form>
+        </main>
+       
 </body>
 </html>

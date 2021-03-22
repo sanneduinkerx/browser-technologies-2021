@@ -1,27 +1,12 @@
 <%- include('./partials/head.ejs'); %> 
 <body>
+    <%- include('./partials/header.ejs'); %> 
 
-         <!-- icon nerdy shirt maker  -->
-         <!-- deed eerst een img png logo maar omdat het wit was en als je dan css uitzet zag je het icon niet bij svg wordt het dan zwart -->
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.94 67.43" width="100px" height="100px">
-            <defs>
-                <style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#fff;}</style>
-            </defs>
-            <path class="cls-1" d="M9,21c0,28.05,8,50.76,17.87,50.76S44.74,49,44.78,21Z" transform="translate(-6.62 -15.57)"/>
-            <ellipse class="cls-2" cx="22.54" cy="33.85" rx="3.09" ry="12.78"/>
-            <rect class="cls-2" width="41.48" height="5.76"/>
-            <path class="cls-1" d="M90.69,21c0,28.05-8,50.76-17.87,50.76S55,49,55,21Z" transform="translate(-6.62 -15.57)"/>
-            <ellipse class="cls-2" cx="63.95" cy="33.85" rx="3.09" ry="12.78"/>
-            <rect class="cls-2" x="52.08" y="15.57" width="41.48" height="5.76" transform="translate(139.02 21.33) rotate(-180)"/>
-            <path class="cls-1" d="M43.69,76.45c1.46,4.12,5.29,6.26,8.49,5.34,3.46-1,4.63-5.11,4.69-5.34" transform="translate(-6.62 -15.57)"/>
-        
-        </svg>
-        <h1>Let's Start!</h1>
-
+    <main class="formLayout">
         <section>
             <h2>Jouw Shirt</h2>
             <!-- svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="200px">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="250px">
                 <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
                 <defs>
                     <style>.shirtColor{fill:#fff;stroke:#000;stroke-miterlimit:10;}</style>
@@ -30,7 +15,7 @@
                     <path class="shirtColor" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
                 </g>
             </svg>
-            <a href="">Voeg nog een shirt toe</a>
+            <!-- <a href="">Voeg nog een shirt toe</a> -->
         </section>
 
         <form action="" method="post" id="shirtMaker">
@@ -122,5 +107,8 @@
             <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Verder</p></button>
 
         </form>
+
+    </main>
+        
 </body>
 </html>
