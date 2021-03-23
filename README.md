@@ -1,23 +1,11 @@
 # Browser Technologies @cmda-minor-web 20-21
 
-//Robuuste, toegankelijke websites ontwerpen en maken …
-
-Één van de mooiste [principes](https://www.w3.org/DesignIssues/Principles.html) van het web is dat iedereen met een computer en een browser het web kan gebruik. [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E). Het is geen gecontroleerde (programmeer) omgeving, je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij in je browser ziet. Er zijn technische beperkingen, zoals afmetingen van de browser, grootte van het apparaat, manier van interactie, kwaliteit van de hardware, kwaliteit van het netwerk en er zijn mensen, allemaal verschillende mensen ...
-
 In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement is en hoe je dit kan toepassen om goede, robuuste, toegankelijke websites te maken. Voor iedereen. Het web is voor iedereen, in dit vak leer je hoe je daarvoor kan zorgen.
 
-### De eindopdracht ✨ Progressive Enhanced Browser Technologie
+### De demo - Nerdy Shirt maker
+[Live demo](nerdy-shirt-maker.herokuapp.com/)
 
-Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het principe van Progressive Enhancement. Zorg dat alle gebruikers, met alle browsers, in iedere context de toepassing zo goed mogelijk te zien, horen en/of voelen krijgen. De meest 'enhanced' versie is 'delightful UX', mooi en prettig om te gebruiken.
-
-- [De eindopdracht - Progressive Enhanced Browser Technologie](https://github.com/cmda-minor-web/browser-technologies-2021/blob/master/course/Eindopdracht.md) 
-
-### Leerdoelen
-- _je leert wat Progressive enhancement is en hoe je dit kan toepassen._
-- _je leert Browser Technologies te onderzoeken, testen en implementeren als enhancement._
-- _je leert hoe je Feature Detection doet en wat je kan doen als een 'feature' niet werkt of wordt ondersteund._
-
-[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/)
+<!-- [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/) -->
 
 # Gekozen use case: 
 **Nerdy T-shirt**
@@ -26,6 +14,29 @@ Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het 
 ## Wireflow
 ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
 ![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png)
+
+## Core-Functionaliteiten:
+
+- Ontwerpen van shirt met een form
+    - met kleur, tekst etc
+    - Maat en voor wie het shirt is aangeven 
+    - verdere gegevens: naam en email 
+    - data moet kunnen verstuurt worden naar server
+
+- Nog een shirt kunnen ontwerpen
+
+- Jouw ontworpen shirts inzien:
+    - in overzichtpagina, al je ontworpen shirts kunnen inkijken
+    - en later nog terug kunnen gaan om je ontwerpen in te zien of waar je gebleven was
+
+- Bestel pagina met gevorderde gegevens om je shirt te kopen en info mailen
+
+## Testen in 4 browsers:
+
+- Chrome - laptop
+- firefox - laptop
+- Chrome - Android telefoon
+- Safari IOS - Iphone 7
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
