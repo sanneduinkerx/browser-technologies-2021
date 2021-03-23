@@ -53,6 +53,26 @@ header svg{
 
 
 /***********************************/
+/************** MAIN **************/
+/*********************************/
+
+/* home page*/
+
+.home section{
+    width: 25em;
+    height: 10em;
+    text-align: center;
+    border: var(--prime-color-2) 5px solid;
+    margin: 0 auto;
+}
+
+/* links that also works like button, same look */
+main a{
+    text-decoration: none;
+    color: var(--prime-color-3);
+}
+
+/***********************************/
 /************** FORM **************/
 /*********************************/
 
@@ -80,15 +100,29 @@ form fieldset div:nth-of-type(3) img{
 
 /* styling button */
 
-form button {
+form button, main a {
     border: var(--prime-color-3) solid 2px;
     padding: .1em 2em;
     box-shadow: var(--box-shadow) var(--prime-color-3);
+    /* old version of safari didn't support it  */
+    -webkit-box-shadow: var(--box-shadow) var(--prime-color-3);
     background-color: var(--prime-color-2);
 }
 
 form button p{
     font-size: var(--medium-size);
+}
+
+/* States */
+
+form button:hover,  main a:hover, form button:focus,  main a:focus{
+    box-shadow: 10px 10px 0px var(--prime-color-3);
+    -webkit-box-shadow: 10px 10px 0px var(--prime-color-3);
+    cursor: pointer;
+}
+
+form button:hover p, form button:focus p,  main a:hover,  main a:focus{
+    font-weight: var(--bold);
 }
 
 /*****************************************/
@@ -109,14 +143,4 @@ form button p{
         grid-template-columns: 1fr 1fr;
     }
 
-    /* States */
-
-    form button:hover, form button:focus{
-        box-shadow: 10px 10px 0px var(--prime-color-3);
-        cursor: pointer;
-    }
-
-    form button:hover p, form button:focus p{
-        font-weight: var(--bold);
-    }
   }

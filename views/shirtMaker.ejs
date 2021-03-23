@@ -15,10 +15,11 @@
                     <path class="shirtColor" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
                 </g>
             </svg>
-            <!-- <a href="">Voeg nog een shirt toe</a> -->
+            <!-- <a href="">Bekijk al je shirts</a> -->
         </section>
 
-        <form action="" method="post" id="shirtMaker">
+        <!-- for now, get data from url, later with a req, body-parser etc-->
+        <form action="/gegevens" method="get" id="shirtMaker">
 
             <fieldset>
                 <legend> Ontwerp T-Shirt</legend>
@@ -27,23 +28,23 @@
                     <p>Kies je kleur</p>
                     <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
 
-                    <input type="radio" id="black" name="color" value="black">
-                    <label for="black">Zwart</label>
+                    <input type="radio" id="zwart" name="color" value="zwart" required>
+                    <label for="zwart">Zwart</label>
     
-                    <input type="radio" id="white" name="color" value="white">
-                    <label for="white">Wit</label>
+                    <input type="radio" id="wit" name="color" value="wit">
+                    <label for="wit">Wit</label>
                     
-                    <input type="radio" id="red" name="color" value="red">
-                    <label for="red">Rood</label>
+                    <input type="radio" id="rood" name="color" value="rood">
+                    <label for="rood">Rood</label>
     
-                    <input type="radio" id="green" name="color" value="green">
-                    <label for="green">Groen</label>
+                    <input type="radio" id="groen" name="color" value="groen">
+                    <label for="groen">Groen</label>
     
-                    <input type="radio" id="blue" name="color" value="blue">
-                    <label for="blue">Blauw</label>
+                    <input type="radio" id="blauw" name="color" value="blauw">
+                    <label for="blauw">Blauw</label>
     
-                    <input type="radio" id="purple" name="color" value="purple">
-                    <label for="purple">Paars</label>
+                    <input type="radio" id="paars" name="color" value="paars">
+                    <label for="paars">Paars</label>
                 </div>
                
                 <div>
@@ -75,18 +76,18 @@
                 <div>
                     <p>Voor wie is het t-shirt?</p>
 
-                    <input type="radio" id="female" name="type" value="female">
-                    <label for="female">Vrouw</label>
+                    <input type="radio" id="vrouw" name="type" value="vrouw" required>
+                    <label for="vrouw">Vrouw</label>
     
-                    <input type="radio" id="male" name="type" value="male">
-                    <label for="male">Man</label>
+                    <input type="radio" id="man" name="type" value="man">
+                    <label for="man">Man</label>
                 </div>
 
                 <div>
                     <p>Wat is de maat voor het shirt?</p>
                     <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
                     
-                    <input type="radio" id="extrasmall" name="size" value="extrasmall">
+                    <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
                     <label for="extrasmall">XS</label>
                     
                     <input type="radio" id="small" name="size" value="small">
@@ -104,11 +105,15 @@
 
             </fieldset>
 
-            <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Verder</p></button>
+            <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
 
         </form>
 
     </main>
+
+    <footer>
+
+    </footer>
         
 </body>
 </html>

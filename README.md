@@ -15,7 +15,7 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
 ![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png)
 
-## Core-Functionaliteiten:
+### Core-Functionaliteiten:
 
 - Ontwerpen van shirt met een form
     - met kleur, tekst etc
@@ -29,14 +29,18 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
     - in overzichtpagina, al je ontworpen shirts kunnen inkijken
     - en later nog terug kunnen gaan om je ontwerpen in te zien of waar je gebleven was
 
-- Bestel pagina met gevorderde gegevens om je shirt te kopen en info mailen
+- Bestel pagina met gevorderde gegevens om je shirt te kopen
 
-## Testen in 4 browsers:
+### Testen in 4 browsers:
 
 - Chrome - laptop
 - firefox - laptop
 - Chrome - Android telefoon
 - Safari IOS - Iphone 7
+
+# Sources
+- [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+- [https://www.youtube.com/watch?v=6iZiqQZBQJY](https://www.youtube.com/watch?v=6iZiqQZBQJY)
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
