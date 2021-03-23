@@ -48,9 +48,9 @@ app.get('/overzicht', function(req, res){
     res.render('overzicht', {
         color: data.color,
         text: data.text,
-        fanBaseImg: `${req.query.fanBaseImg}`,
-        type: `${req.query.type}`,
-        size: `${req.query.size}`
+        fanBaseImg: data.fanBaseImg,
+        type: data.type,
+        size: data.size
     });
 
 })
