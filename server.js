@@ -2,7 +2,7 @@
 const express = require('express');
 const fs = require('fs');
 
-const rawData = fs.readFileSync('data.json');
+const rawData = fs.readFileSync('public/data.json');
 const data = JSON.parse(rawData);
 
 // Create Express app
@@ -22,7 +22,6 @@ app.get('/shirtMaker', function(req, res){
     res.render('shirtMaker');
 });  
 
-
 app.get('/gegevens', function(req, res){ 
     res.render('gegevens');
 
@@ -38,9 +37,9 @@ app.get('/gegevens', function(req, res){
     // stringify so its readable
     const data = JSON.stringify(dataObj, null, 2);
     //write to file data.json
-    fs.writeFile('data.json', data, finished); 
+    fs.writeFile('public/data.json', data, finished); 
     function finished(err){
-        console.log(err);
+        console.log('all set');
     }
 }); 
 
