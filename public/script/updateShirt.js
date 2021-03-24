@@ -18,8 +18,7 @@ inputColor.forEach(item => {
 function updateColor(){
     // getting the value from the clicked input
     const color = this.value;
-    console.log(color);
-    console.log()
+    shirtSVG[0].style.fill = `${color}`;
 }
 
 // function updateText(){

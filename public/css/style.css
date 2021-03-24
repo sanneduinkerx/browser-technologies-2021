@@ -132,12 +132,13 @@ form fieldset div:nth-of-type(3) img{
 
 /* input with text field */
 
-fieldset div input[type=text], fieldset div input[type=email]  {
+fieldset div input[type=text], fieldset div input[type=email], fieldset div input[type=number]  {
     display: block;
     border: solid 2px var(--prime-color-3);
     transition: .2s ease;
     padding: 5px;
-    margin: 0 auto;
+    margin: 1em auto;
+
 }
 
 /* input radio buttons */
