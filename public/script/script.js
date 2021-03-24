@@ -1,3 +1,7 @@
-// document.getElementById("submitButton").addEventListener('click', function(){
-//     console.log("hello");
-// });
+const inputColor = document.querySelector('');
+
+inputColor.addEventListener('click', update);
+
+function update(){
+    console.log('works');
+}

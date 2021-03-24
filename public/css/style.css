@@ -1,7 +1,7 @@
 /* custom properties */
 
 :root{
-
+    /* is niet overal supported...*/
     /* color */
     --prime-color-1: #663399;
     --prime-color-2: white;
@@ -59,8 +59,7 @@ header svg{
 /* home page*/
 
 .home section{
-    width: 25em;
-    height: 10em;
+    max-width: 25em;
     text-align: center;
     border: var(--prime-color-2) 5px solid;
     margin: 0 auto;

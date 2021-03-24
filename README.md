@@ -18,7 +18,6 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 ### Core-Functionaliteiten:
 - Shirt kunnen ontwerpen (via form)
 - Eerder gemaakte shirts herzien
-- Verdergaan waar je gebleven was
 - bestellen
 
 <!-- - Ontwerpen van shirt met een form
