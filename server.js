@@ -46,27 +46,26 @@ app.post('/shirtMaker', function(req, res){
     function finished(err){
         console.log('all set');
         // res.redirect(`/gegevens/${userId}`);
-        res.redirect('/gegevens')
+        res.redirect('/bestel')
     }
-})
+}) 
 
-app.get('/gegevens', function(req, res){ 
-    res.render('gegevens');
-    
-}); 
-
-app.get('/overzicht', function(req, res){
+app.get('/bestel', function(req, res){
     const rawData = fs.readFileSync('public/data/data.json');
     const data = JSON.parse(rawData);
 
     console.log(data);
-    res.render('overzicht', {
+    res.render('bestel', {
         color: data.color,
         text: data.text,
         fanBaseImg: data.fanBaseImg,
         type: data.type,
         size: data.size
     });
+})
+
+app.get('/bevestiging', function(req, res){
+    res.render('bevestiging')
 })
 
 // Start the Express server

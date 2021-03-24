@@ -2,6 +2,7 @@
 
 :root{
     /* is niet overal supported...*/
+
     /* color */
     --prime-color-1: #663399;
     --prime-color-2: white;
@@ -28,12 +29,17 @@
 
 body{
     background-color: var(--prime-color-1);
-    font-family: 'Space Mono', monospace;
     color:var(--prime-color-2);
+    margin: 0;
+    box-sizing: border-box;
 }
 
-p{
+body, p, fieldset div input[type=text], fieldset div input[type=email] {
     font-family: 'Space Mono', monospace;
+}
+
+i{
+    font-weight: 300;
 }
 
 /*************************************/
@@ -56,6 +62,22 @@ header svg{
 /************** MAIN **************/
 /*********************************/
 
+/* section + shirt */
+
+.shirtColor{
+    fill: white;
+    stroke:#000;
+    stroke-miterlimit:10;
+}
+
+.formLayout section:first-of-type{
+    justify-content: center;
+    /* not supported everywhere */
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+    text-align: center;
+}
+
 /* home page*/
 
 .home section{
@@ -75,19 +97,29 @@ main a{
 /************** FORM **************/
 /*********************************/
 
+/* basics */
+
+
 fieldset{
     background-color: var(--prime-color-2);
     max-width: var(--width-form);
     color: var(--prime-color-3);
     border: none;
+    text-align: center;
 }
 
 fieldset legend{
     font-weight: var(--bold);
 }
 
-fieldset div input[type=text], fieldset div input[type=email]  {
-    display: block;
+fieldset div{
+    margin: 20px 0px;
+}
+
+/* text */
+
+fieldset div > p, label[for=text]{
+    font-weight: var(--bold);
 }
 
 /* Logo sizes - img on shirt */
@@ -95,9 +127,25 @@ fieldset div input[type=text], fieldset div input[type=email]  {
 form fieldset div:nth-of-type(3) img{
     width: var(--img-width);
     height: var(--img-height);
+    transition: .3s ease-in-out;
 }
 
-/* styling button */
+/* input with text field */
+
+fieldset div input[type=text], fieldset div input[type=email]  {
+    display: block;
+    border: solid 2px var(--prime-color-3);
+    transition: .2s ease;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+/* input radio buttons */
+fieldset div label:hover{
+    cursor: pointer;
+}
+
+/* button */
 
 form button, main a {
     border: var(--prime-color-3) solid 2px;
@@ -106,6 +154,8 @@ form button, main a {
     /* old version of safari didn't support it  */
     -webkit-box-shadow: var(--box-shadow) var(--prime-color-3);
     background-color: var(--prime-color-2);
+    margin: 1em auto;
+    display: block;
 }
 
 form button p{
@@ -122,6 +172,24 @@ form button:hover,  main a:hover, form button:focus,  main a:focus{
 
 form button:hover p, form button:focus p,  main a:hover,  main a:focus{
     font-weight: var(--bold);
+}
+fieldset div label:hover{
+    cursor: pointer;
+}
+
+fieldset div label img:hover {
+    transform: scale(1.1);
+}
+
+fieldset div input[type=text]:focus, fieldset div input[type=email]:focus {
+    border: solid 4px var(--prime-color-3);
+    outline: none;
+}
+
+/* checked */
+fieldset div input[type=radio]:checked {
+    border: solid 4px var(--prime-color-3);
+    /* outline: none; */
 }
 
 /*****************************************/
@@ -140,6 +208,11 @@ form button:hover p, form button:focus p,  main a:hover,  main a:focus{
     .formLayout {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .formLayout > h1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
   }

@@ -4,24 +4,22 @@
 
     <main class="formLayout">
         <section>
-            <%- include('./shirt.ejs'); %> 
+            <%- include('./partials/shirt.ejs'); %> 
         </section>
-
-        <!-- for now, get data from url, later with a req, body-parser etc-->
         <form action="/shirtMaker" method="post" id="shirtMaker">
 
             <fieldset>
                 <legend> Ontwerp T-Shirt</legend>
-
+        
                 <div>
                     <p>Kies je kleur</p>
                     <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
-
+        
                     <label for="black">
                         <input type="radio" id="black" name="color" value="black" required>
                         Zwart 
                     </label>
-    
+        
                     <label for="white">
                         <input type="radio" id="white" name="color" value="white">
                         Wit
@@ -31,22 +29,22 @@
                         <input type="radio" id="red" name="color" value="red">
                         Rood
                     </label>
-    
+        
                     <label for="green">
                         <input type="radio" id="green" name="color" value="green">
                         Groen
                     </label>
-    
+        
                     <label for="blue">
                         <input type="radio" id="blue" name="color" value="blue">
                         Blauw
                     </label>
-    
+        
                     <label for="purple">
                         <input type="radio" id="purple" name="color" value="purple">
                         Paars
                     </label>
-
+        
                 </div>
                
                 <div>
@@ -57,48 +55,48 @@
                     
                     <p><i>Bv. I'm not doing 'Get Help'</i></p>
                 </div>
-
+        
                 <div>
                     <p>Voeg een afbeelding toe (optioneel)</p>
-
+        
                     <!-- image source: https://commons.wikimedia.org/wiki/File:Marvel-Comics-Logo.svg -->
                     <label for="marvel">
                         <input type="radio" id="marvel" name="fanBaseImg" value="marvel">
                         <img src="/img/marvelLogo.png" alt="Marvel Universe rode logo">
                     </label>
-
+        
                     <!-- image source: https://1000merken.com/harry-potter-logo/ -->
                     <label for="HarryPotter">
                         <input type="radio" id="HarryPotter" name="fanBaseImg" value="HarryPotter">
                         <img src="/img/Harry-Potter-Logo.png" alt="Harry Potter Logo">
                     </label>
-
+        
                     <!-- image source: https://1000logos.net/star-wars-logo/ -->
                     <label for="StarWars">
                         <input type="radio" id="StarWars" name="fanBaseImg" value="StarWars">
                         <img src="/img/StarWars-logo.png" alt="Star Wars Logo">
                     </label>
-
+        
                 </div>
             </fieldset>
-
+        
             <fieldset>
                 <legend> Maat Shirt </legend>
-
+        
                 <div>
                     <p>Voor wie is het t-shirt?</p>
-
+        
                     <label for="vrouw">
                         <input type="radio" id="vrouw" name="type" value="vrouw" required>
                         Vrouw
                     </label>
-    
+        
                     <label for="man">
                         <input type="radio" id="man" name="type" value="man">
                         Man
                     </label>
                 </div>
-
+        
                 <div>
                     <p>Wat is de maat voor het shirt?</p>
                     <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
@@ -114,34 +112,30 @@
                         <input type="radio" id="small" name="size" value="small">
                         S
                     </label>
-    
+        
                     <label for="medium">
                         <input type="radio" id="medium" name="size" value="medium">
                         M
                     </label>
-
+        
                     <label for="large">
                         <input type="radio" id="large" name="size" value="large">
                         L
                     </label>
-
+        
                     <label for="extralarge">
                         <input type="radio" id="extralarge" name="size" value="extralarge">
                         XL
                     </label>
                 </div>
-
+        
             </fieldset>
-
+        
             <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
-
+        
         </form>
 
     </main>
-
-    <footer>
-
-    </footer>
-        
+<script src="script/updateShirt.js"></script>
 </body>
 </html>
