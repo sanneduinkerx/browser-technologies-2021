@@ -16,8 +16,12 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 ![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png)
 
 ### Core-Functionaliteiten:
+- Shirt kunnen ontwerpen (via form)
+- Eerder gemaakte shirts herzien
+- Verdergaan waar je gebleven was
+- bestellen
 
-- Ontwerpen van shirt met een form
+<!-- - Ontwerpen van shirt met een form
     - met kleur, tekst etc
     - Maat en voor wie het shirt is aangeven 
     - verdere gegevens: naam en email 
@@ -29,7 +33,7 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
     - in overzichtpagina, al je ontworpen shirts kunnen inkijken
     - en later nog terug kunnen gaan om je ontwerpen in te zien of waar je gebleven was
 
-- Bestel pagina met gevorderde gegevens om je shirt te kopen
+- Bestel pagina met gevorderde gegevens om je shirt te kopen -->
 
 ### Testen in 4 browsers:
 
