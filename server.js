@@ -4,8 +4,7 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const {v4 : uuidv4} = require('uuid')
 
-const rawData = fs.readFileSync('public/data/data.json');
-const data = JSON.parse(rawData);
+// const rawData = fs.readFileSync('public/data/data.json');
 
 // Create Express app
 const app = express()
@@ -38,9 +37,7 @@ app.post('/shirtMaker', function(req, res){
         userId,
         color: `${req.body.color}`,
         text:  `${req.body.TshirtText}`,
-        fanBaseImg: `${req.body.fanBaseImg}`,
-        type: `${req.body.type}`,
-        size: `${req.body.size}`
+        fanBaseImg: `${req.body.fanBaseImg}`
     }
 
     // stringify so its readable
@@ -67,6 +64,24 @@ app.get('/bestel', function(req, res){
         size: data.size
     });
 })
+
+// app.post('/bestel', function(req, res){
+//     const dataObj = {
+//         color: `${req.body.color}`,
+//         text:  `${req.body.TshirtText}`,
+//         fanBaseImg: `${req.body.fanBaseImg}`
+//     }
+
+//     // stringify so its readable
+//     const data = JSON.stringify(dataObj, null, 2);
+//     //write to file data.json
+//     fs.writeFile('public/data/data.json', data, finished); 
+//     function finished(err){
+//         console.log('all set');
+//         // res.redirect(`/gegevens/${userId}`);
+//         res.redirect('/bevestiging')
+//     }
+// })
 
 app.get('/bevestiging', function(req, res){
     res.render('bevestiging')

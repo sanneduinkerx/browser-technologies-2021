@@ -107,6 +107,8 @@ text {
 main a{
     text-decoration: none;
     color: var(--prime-color-3);
+    max-width: 10em;
+    text-align: center;
 }
 
 /***********************************/

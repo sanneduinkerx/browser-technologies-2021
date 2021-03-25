@@ -23,6 +23,7 @@ inputColor.forEach(item => {
 
 text.addEventListener('keyup', updateText);
 
+// updating the fill of the svg 
 //updating svg - doesnt work without css
 function updateColor(){
     // getting the value from the clicked input
@@ -30,6 +31,7 @@ function updateColor(){
     shirtSVG[0].style.fill = `${color}`;
 }
 
+// updating text live on shirt within an p element
 //this works without css
 function updateText(){
     const text = this.value;
