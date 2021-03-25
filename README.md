@@ -12,8 +12,12 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 *Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, opslaan, bestellen, en een volgende keer dat ik de site bezoek kunnen gebruiken.*
 
 ## Wireflow
-![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
-![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png)
+versie 2:
+![](https://user-images.githubusercontent.com/60745348/112509400-b7990d00-8d90-11eb-8110-a3e91da1e7a5.png)
+
+<!-- versie 1: -->
+<!-- ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
+![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png) -->
 
 ### Core-Functionaliteiten:
 - Shirt kunnen ontwerpen (via form)
