@@ -13,7 +13,8 @@ In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement 
 
 ## Wireflow
 versie 2:
-![](https://user-images.githubusercontent.com/60745348/112509400-b7990d00-8d90-11eb-8110-a3e91da1e7a5.png)
+
+![](https://user-images.githubusercontent.com/60745348/112509718-05ae1080-8d91-11eb-8ca9-c49333c56346.png)
 
 <!-- versie 1: -->
 <!-- ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
