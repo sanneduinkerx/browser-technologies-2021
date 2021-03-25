@@ -7,7 +7,7 @@
             <section>
                 <h2>Jouw shirt</h2>
                  <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="250px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="370px">
                     <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
                     <defs>
                         <style>
@@ -22,15 +22,9 @@
                     <g id="Shirt-Uiterlijk" data-name="Shirt Uiterlijk">
                         <path class="shirtColor" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
                     </g>
-                    <div>
-                        <text x="20" y="35" class="small"><%= text %></text>
-                    </div>
+                    
                 </svg>
-                <p>kleur: <%= color %></p>
-                <!-- <p>tekst: '<%= text %>'</p>
-                <p>Afbeelding: <%= fanBaseImg %></p> -->
-                <p>Voor wie: <%= type %></p>
-                <p>Maat: <%= size %></p>
+                <p><%= text %></p>
         </section>
 
         <section>
@@ -38,29 +32,80 @@
             <h2>Persoonlijke Gegevens</h1>
 
                 <form action="/bevestiging" method="get" id="info">
+
+                    <fieldset>
+                        <legend> Maat Shirt </legend>
+                
+                        <div>
+                            <p>Voor wie is het t-shirt?</p>
+                
+                            <label for="vrouw">
+                                <input type="radio" id="vrouw" name="type" value="vrouw" required>
+                                Vrouw
+                            </label>
+                
+                            <label for="man">
+                                <input type="radio" id="man" name="type" value="man">
+                                Man
+                            </label>
+                        </div>
+
+                    <div>
+                        <p>Wat is de maat voor het shirt?</p>
+                        <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
+                        
+                        
+                        <label for="extrasmall">
+                            <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
+                            XS
+                        </label>
+                        
+                       
+                        <label for="small">
+                            <input type="radio" id="small" name="size" value="small">
+                            S
+                        </label>
+            
+                        <label for="medium">
+                            <input type="radio" id="medium" name="size" value="medium">
+                            M
+                        </label>
+            
+                        <label for="large">
+                            <input type="radio" id="large" name="size" value="large">
+                            L
+                        </label>
+            
+                        <label for="extralarge">
+                            <input type="radio" id="extralarge" name="size" value="extralarge">
+                            XL
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="ammount">
+                            Hoeveel wil je er bestellen?(max. is 50)
+                            <input type="number" id="ammount" name="ammount" min="0" max="50">
+                        </label>
+                       
+                    </div>
+            
+                </fieldset>
         
                     <fieldset>
                         <legend> Gegevens</legend>
         
                         <div>
                             <label for="text">Wat is jouw naam?</label>
-                            <input type="text" id="text" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
-                            <input type="text" id="text" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
+                            <input type="text" id="textFirstname" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
+                            <input type="text" id="textLastname" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
                         </div>
         
                         <div>
                             <label for="email">Wat is je E-mail</label>
                             <input type="email" id="email" name="userMail">
                         </div>
-                        <!-- aantallen  -->
-                        <div>
-                            <label for="ammount">
-                                Hoeveel wil je er bestellen?(max. is 50)
-                                <input type="number" id="ammount" name="ammount" min="0" max="50">
-                            </label>
-                           
-                        </div>
-        
+
                     </fieldset>
         
                     <button type="submit" form="info" value="Submit" id="submitButton"> <p>Bestel!</p></button>

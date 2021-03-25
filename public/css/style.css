@@ -32,9 +32,10 @@ body{
     color:var(--prime-color-2);
     margin: 0;
     box-sizing: border-box;
+    hyphens: auto;
 }
 
-body, p, fieldset div input[type=text], fieldset div input[type=email] {
+body, p, fieldset div input[type=text], fieldset div input[type=email], text {
     font-family: 'Space Mono', monospace;
 }
 
@@ -76,6 +77,21 @@ header svg{
     display: grid;
     grid-template-rows: 0fr 1fr;
     text-align: center;
+    position: relative;
+}
+
+svg + p{
+    position: absolute;
+    top: 19em;
+    left: 0;
+    right: 0;
+    mix-blend-mode: difference;
+}
+text {
+    text-align: center;
+    font-size: 7px;
+    width: 10px;
+    background-color: white;
 }
 
 /* home page*/
@@ -99,7 +115,6 @@ main a{
 
 /* basics */
 
-
 fieldset{
     background-color: var(--prime-color-2);
     max-width: var(--width-form);
@@ -115,6 +130,10 @@ fieldset legend{
 fieldset div{
     margin: 20px 0px;
 }
+
+/* fieldset div input[type=radio]{ */
+    /* visibility: hidden; */
+/* } */
 
 /* text */
 
@@ -171,6 +190,10 @@ form button:hover,  main a:hover, form button:focus,  main a:focus{
     cursor: pointer;
 }
 
+form label:hover{
+    transform: translate(1.1);
+}
+
 form button:hover p, form button:focus p,  main a:hover,  main a:focus{
     font-weight: var(--bold);
 }
@@ -215,5 +238,10 @@ fieldset div input[type=radio]:checked {
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
+  }
+
+  /* USE THIS IN CSS AND OBJECT DETECTION IN JS FOR PE donr forget */
+  @support {
 
   }

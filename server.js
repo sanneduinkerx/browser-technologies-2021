@@ -22,6 +22,10 @@ app.get('/', function(req, res){
     res.render('home');
 }); 
 
+app.get('/overzicht', function(req, res){
+    res.render('overzicht')
+})
+
 app.get('/shirtMaker', function(req, res){ 
     res.render('shirtMaker');
 });  

@@ -4,7 +4,15 @@
 
     <main class="formLayout">
         <section>
-            <%- include('./partials/shirt.ejs'); %> 
+            <h2>Jouw Shirt</h2>
+            <!-- svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="320px" id="svgShirt">
+                <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
+                <g id="Shirt-Uiterlijk" data-name="Shirt Uiterlijk">
+                    <path class="shirtColor" d="M37.59,3.52s-11.85,6-14.29,7A5.61,5.61,0,0,0,20.16,14s-6,22.3-5.46,24.51,13,2.9,13,2.9,2,46.36-.81,50.31c0,0,.93,2.67,10.69,3.83a186.76,186.76,0,0,0,21.61.93s10-1.16,14-3.6c0,0-4.06-46.7-.69-51.7,0,0,7.66.23,12.78-1.62,0,0-2.91-26.84-7-28.35S62.22,3.52,62.22,3.52s-2.67,3.84-6.74,4.42a45.83,45.83,0,0,1-9.06.11S42.12,7.82,37.59,3.52Z" transform="translate(-14.16 -2.88)"/>
+                </g>
+        
+            </svg>
         </section>
         <form action="/shirtMaker" method="post" id="shirtMaker">
 
@@ -49,11 +57,11 @@
                
                 <div>
                     <label for="text">
-                        Wat voor tekst wil je op het Shirt?
-                        <input type="text" id="text" name="TshirtText" required maxlength="25" size="25">
+                        Wat voor tekst wil je op het Shirt? (max. 17 characters)
+                        <input type="text" id="text" name="TshirtText" required maxlength="17" size="17">
                     </label>
                     
-                    <p><i>Bv. 'AND. I. AM. IRON. MAN.'</i></p>
+                    <p><i>Bv. 'I. AM. IRON. MAN.'</i></p>
                 </div>
         
                 <div>
@@ -84,57 +92,7 @@
         
                 </div>
             </fieldset>
-        
-            <fieldset>
-                <legend> Maat Shirt </legend>
-        
-                <div>
-                    <p>Voor wie is het t-shirt?</p>
-        
-                    <label for="vrouw">
-                        <input type="radio" id="vrouw" name="type" value="vrouw" required>
-                        Vrouw
-                    </label>
-        
-                    <label for="man">
-                        <input type="radio" id="man" name="type" value="man">
-                        Man
-                    </label>
-                </div>
-        
-                <div>
-                    <p>Wat is de maat voor het shirt?</p>
-                    <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
-                    
-                    
-                    <label for="extrasmall">
-                        <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
-                        XS
-                    </label>
-                    
-                   
-                    <label for="small">
-                        <input type="radio" id="small" name="size" value="small">
-                        S
-                    </label>
-        
-                    <label for="medium">
-                        <input type="radio" id="medium" name="size" value="medium">
-                        M
-                    </label>
-        
-                    <label for="large">
-                        <input type="radio" id="large" name="size" value="large">
-                        L
-                    </label>
-        
-                    <label for="extralarge">
-                        <input type="radio" id="extralarge" name="size" value="extralarge">
-                        XL
-                    </label>
-                </div>
-        
-            </fieldset>
+    
         
             <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
         
