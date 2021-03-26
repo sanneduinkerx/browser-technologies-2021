@@ -1,7 +1,7 @@
 //enhancement, dynamic changing shirt when user has clicked an input 
 // source: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 
-// ADD FEATURE DETECTION FIRST SEE IF IT WORKS THEN EXECUTE IT
+// dont forget feature detection
 
 // selecting elements from dom
 const shirtSVG = document.getElementsByClassName('shirtColor');
@@ -15,27 +15,23 @@ const textShirt = document.createElement('p');
 section.appendChild(textShirt);
 
 // eventlisteners
-
 // for each input with name color an eventListener click that will then update 
-inputColor.forEach(item => {
-    item.addEventListener('click', updateColor);
-})
-
-text.addEventListener('keyup', updateText);
-
 // updating the fill of the svg 
 //updating svg - doesnt work without css
-function updateColor(){
-    // getting the value from the clicked input
-    const color = this.value;
-    shirtSVG[0].style.fill = `${color}`;
-}
+inputColor.forEach(item => {
+    item.addEventListener('click', function updateColor(){
+         // getting the value from the clicked input
+        const color = this.value;
+        shirtSVG[0].style.fill = `${color}`;
+    });
+})
 
 // updating text live on shirt within an p element
 //this works without css
-function updateText(){
+text.addEventListener('keyup', function updateText(){
     const text = this.value;
     textShirt.textContent = `${text}`;
     console.log(textShirt);
-}
+});
 
+// fallback when not working, if eventlistener is not supported, hide shirt

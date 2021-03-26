@@ -1,4 +1,6 @@
 /* custom properties */
+/* dont forget feature detection, @support */
+/* find a way to get links to be seen via tab, now doesnt work in firefox, or safari */
 
 :root{
     /* is niet overal supported...*/

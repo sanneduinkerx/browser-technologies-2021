@@ -67,9 +67,12 @@ app.get('/bestel', function(req, res){
 
 // app.post('/bestel', function(req, res){
 //     const dataObj = {
-//         color: `${req.body.color}`,
-//         text:  `${req.body.TshirtText}`,
-//         fanBaseImg: `${req.body.fanBaseImg}`
+//         type: `${req.body.type}`,
+//         size:  `${req.body.size}`,
+//         ammount: `${req.body.ammount}`,
+//         firstname: `${req.body.firstname}`,
+//         lastname: `${req.body.surname}`,
+//         email: `${req.body.userMail}`,
 //     }
 
 //     // stringify so its readable
