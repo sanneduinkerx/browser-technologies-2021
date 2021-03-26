@@ -1,7 +1,8 @@
 //enhancement, dynamic changing shirt when user has clicked an input 
 // source: https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
 
-// dont forget feature detection
+// dont forget feature detection, als JS uit is wat is de fallback -> dan niet shirt laten zien? of als eventlistener niet werkt
+//so automatically visibilty hidden, and visible when js works with a class
 
 // selecting elements from dom
 const shirtSVG = document.getElementsByClassName('shirtColor');
