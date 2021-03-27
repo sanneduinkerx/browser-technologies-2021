@@ -2,7 +2,7 @@
 <body>
     <%- include('./partials/header.ejs'); %> 
 
-    <main class="formLayout">
+    <main class="formBestel">
         <h1>Bestellen</h1>
             <section>
                 <h2>Jouw shirt</h2>
@@ -25,11 +25,9 @@
                     
                 </svg>
                 <p><%= text %></p>
+                <p><%= color %></p>
+                <!-- if css disabled: dan zie je nog steeds welke kleur het is, plus voor mensen die blind zijn kunnen het checken-->
         </section>
-
-        <section>
-
-            <h2>Persoonlijke Gegevens</h1>
 
                 <form action="/bevestiging" method="get" id="info">
 
@@ -111,10 +109,7 @@
                     <button type="submit" form="info" value="Submit" id="submitButton"> <p>Bestel!</p></button>
         
                 </form>
-
-        </section>
         
-
     </main>
 </body>
 </html>

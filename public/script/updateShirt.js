@@ -9,10 +9,13 @@ const shirtSVG = document.getElementsByClassName('shirtColor');
 const inputColor = document.querySelectorAll('input[name=color]');
 const text = document.querySelector('input[type=text]');
 const svg = document.getElementById('svgShirt');
-const section = document.querySelector('section:first-of-type')
-
-//creating an input field for the tshirt text
+const section = document.getElementById('svgShow');
+const main = document.getElementsByClassName('formLayout');
 const textShirt = document.createElement('p');
+
+// if js works, svg is shown to see live updates, otherwise user cant see svg just form -> core function
+main[0].classList.add('show');
+//creating an input field for the tshirt text
 section.appendChild(textShirt);
 
 // eventlisteners
@@ -34,5 +37,8 @@ text.addEventListener('keyup', function updateText(){
     textShirt.textContent = `${text}`;
     console.log(textShirt);
 });
+
+//updating img in shirt
+//........
 
 // fallback when not working, if eventlistener is not supported, hide shirt
