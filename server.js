@@ -8,6 +8,7 @@ const {v4 : uuidv4} = require('uuid')
 
 // Create Express app
 const app = express()
+const userId = uuidv4()
 const PORT = process.env.PORT || 8081; 
 
 app.use(express.static('public'))
@@ -31,19 +32,20 @@ app.get('/shirtMaker', function(req, res){
 
 // use app.post later, at least i know how it works, didnt have time to do more
 app.post('/shirtMaker', function(req, res){
-        const userId = uuidv4()
        //getting data from the posted form
        const dataObj = {
         userId,
-        color: `${req.body.color}`,
-        text:  `${req.body.TshirtText}`,
-        fanBaseImg: `${req.body.fanBaseImg}`
+        userDesign: {   
+            color: `${req.body.color}`,
+            text:  `${req.body.TshirtText}`,
+            fanBaseImg: `${req.body.fanBaseImg}`
+        }
     }
 
     // stringify so its readable
     const data = JSON.stringify(dataObj, null, 2);
     //write to file data.json
-    fs.writeFile('public/data/data.json', data, finished); 
+    fs.writeFile('public/data/design.json', data, finished); 
     function finished(err){
         console.log('all set');
         // res.redirect(`/gegevens/${userId}`);
@@ -52,39 +54,45 @@ app.post('/shirtMaker', function(req, res){
 }) 
 
 app.get('/bestel', function(req, res){
-    const rawData = fs.readFileSync('public/data/data.json');
+    const rawData = fs.readFileSync('public/data/design.json');
     const data = JSON.parse(rawData);
 
     console.log(data);
     res.render('bestel', {
-        color: data.color,
-        text: data.text,
-        fanBaseImg: data.fanBaseImg,
-        type: data.type,
-        size: data.size
+        color: data.userDesign.color,
+        text: data.userDesign.text,
+        fanBaseImg: data.userDesign.fanBaseImg,
+        type: data.userDesign.type,
+        size: data.userDesign.size
     });
 })
 
-// app.post('/bestel', function(req, res){
-//     const dataObj = {
-//         type: `${req.body.type}`,
-//         size:  `${req.body.size}`,
-//         ammount: `${req.body.ammount}`,
-//         firstname: `${req.body.firstname}`,
-//         lastname: `${req.body.surname}`,
-//         email: `${req.body.userMail}`,
-//     }
+app.post('/bestel', function(req, res){
+    const rawData = fs.readFileSync('public/data/design.json');
+    const designData = JSON.parse(rawData);
+    
+    const dataObj = {
+        userId: designData.userId, 
+        userData: {
+            type: `${req.body.type}`,
+            size:  `${req.body.size}`,
+            ammount: `${req.body.ammount}`,
+            firstname: `${req.body.firstname}`,
+            lastname: `${req.body.surname}`,
+            email: `${req.body.userMail}`,
+        }
+    }
 
-//     // stringify so its readable
-//     const data = JSON.stringify(dataObj, null, 2);
-//     //write to file data.json
-//     fs.writeFile('public/data/data.json', data, finished); 
-//     function finished(err){
-//         console.log('all set');
-//         // res.redirect(`/gegevens/${userId}`);
-//         res.redirect('/bevestiging')
-//     }
-// })
+    // stringify so its readable
+    const data = JSON.stringify(dataObj, null, 2);
+    //write to file data.json
+    fs.writeFile('public/data/userData.json', data, finished); 
+    function finished(err){
+        console.log('all set');
+        // res.redirect(`/gegevens/${userId}`);
+        res.redirect('/bevestiging')
+    }
+})
 
 app.get('/bevestiging', function(req, res){
     res.render('bevestiging')
