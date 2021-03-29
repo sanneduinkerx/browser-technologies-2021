@@ -25,7 +25,7 @@ section.appendChild(textShirt);
 // updating the fill of the svg 
 // updating svg - doesnt work without css
 inputColor.forEach(item => {
-    item.addEventListener('change', function updateColor(){
+    item.addEventListener('click', function updateColor(){
          // getting the value from the clicked input
         const color = this.value;
         shirtSVG[0].style.fill = `${color}`;
