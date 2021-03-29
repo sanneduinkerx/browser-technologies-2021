@@ -74,25 +74,57 @@ if(localStorageDetection() === true){
         const userlastName = document.querySelector(`input[name=surname]`);
         const userEmail = document.querySelector(`input[name=userMail]`);
 
-        //if colorChoice is available and doesnt give error then do whats in there otherwise the other
+        //if colorChoice is available and doesnt give error then do whats in there 
         // had error first on bestelform cause couldnt find colorChoice of undefined
 
         if(colorChoice){
             //ontwerp
             // that input element is checked:
             colorChoice.checked=true;
+            //on refresh also keep the color of t shirt preview
+            const shirtSVG = document.getElementsByClassName('shirtColor');
+            shirtSVG[0].style.fill = `${color}`;
+
             imgChoice.checked=true;
+            switch (img){
+                case 'Marvel' :
+                    imgElement.src = '/img/marvelLogo.png';
+                    imgElement.alt = 'Marvel wit met rood logo';
+                    break;
+    
+                case 'HarryPotter' :
+                    imgElement.src = '/img/Harry-Potter-Logo.png';
+                    imgElement.alt = 'Harry Potter zilver logo';
+                    break;
+                
+                case 'StarWars' :
+                    imgElement.src = '/img/StarWars-logo.png';
+                    imgElement.alt = 'Star Wars geel logo';
+                    break;
+                
+                case 'noImg' :
+                    imgElement.removeAttribute('src');
+                    imgElement.removeAttribute('alt');
+                    break;
+            }
+            
             textChoice.value = `${text}`;
+            textShirt.textContent = `${text}`;
+
+
         } else if(typeChoice) {
             //bestel
-            typeChoice.checked=true;
-            sizeChoice.checked=true;
-            ammountChoice.value = `${ammount}`;
+            ammountChoice.value = `${ammount}`; // cant be parsed?
             userName.value = `${firstName}`;
             userlastName.value = `${lastName}`;
             userEmail.value = `${userMail}`;   
+            typeChoice.checked=true;
+            sizeChoice.checked=true;
+            
         }
+
     })
+
 
 } else{
     //if browser doesnt support localstorage, nothing happens, 

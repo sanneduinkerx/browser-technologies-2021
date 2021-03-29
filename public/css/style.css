@@ -37,7 +37,6 @@ header svg{
     margin: 0em 1em;
 }
 
-
 /***********************************/
 /************** MAIN **************/
 /*********************************/
@@ -58,7 +57,7 @@ header svg{
     position: relative; /* test */
 }
 
-img + p{
+#svgShow p:first-of-type{
     position: absolute; /* test */
     top: 19em;
     left: 0;

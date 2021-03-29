@@ -53,7 +53,6 @@ app.post('/shirtMaker', function(req, res){
     fs.writeFile('public/data/design.json', data, finished); 
     function finished(err){
         console.log('all set');
-        // res.redirect(`/gegevens/${userId}`);
         res.redirect('/bestel')
     }
 }) 
