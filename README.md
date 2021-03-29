@@ -22,8 +22,8 @@ versie 2:
 
 ### Core-Functionaliteiten:
 - Shirt kunnen ontwerpen (via form)
-- Eerder gemaakte shirts herzien
-- bestellen
+<!-- - Eerder gemaakte shirts herzien -->
+- bestellen van ontworpen shirt
 
 <!-- - Ontwerpen van shirt met een form
     - met kleur, tekst etc
@@ -45,6 +45,11 @@ versie 2:
 - firefox - laptop
 - Chrome - Android telefoon
 - Safari IOS - Iphone 7
+
+### wishlist
+Dingen die ik in de toekomst nog wil toepassen:
+- overzicht van alle eerdere gemaakte shirts op home pagina
+- een shirt kunnen wijzigen
 
 # Sources
 - [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)

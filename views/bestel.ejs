@@ -4,10 +4,10 @@
 
     <main class="formBestel">
         <h1>Bestellen</h1>
-            <section>
+            <section id="svgShow">
                 <h2>Jouw shirt</h2>
                  <!-- svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="370px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.71 94.1" width="320px">
                     <!-- accesibility: https://css-tricks.com/accessible-svgs/ later -->
                     <defs>
                         <style>
@@ -24,7 +24,29 @@
                     </g>
                     
                 </svg>
+                <!-- source: https://stackoverflow.com/questions/8216918/can-i-use-conditional-statements-with-ejs-templates-in-jmvc -->
+
+                <% switch (fanBaseImg) {
+                    case 'Marvel' : %>
+                            <img src="/img/marvelLogo.png" alt="Marvel wit met rood logo">
+                            <% break;
+                    
+                    case 'HarryPotter' : %>
+                            <img src="/img/Harry-Potter-Logo.png" alt="Harry Potter zilver logo">
+                            <% break;
+                    
+                    case 'StarWars' : %>
+                            <img src="/img/StarWars-logo.png" alt="Star Wars geel logo">
+                            <% break;
+
+                    case 'noImg' : %>
+                            
+                            <% break;
+                    } %>
+            
                 <p><%= text %></p>
+                <!-- display none doen in css dat wnnr css uit is je de kleur wel ziet -->
+                <p> Kleur shirt: <%= color %></p>
                 <!-- if css disabled: dan zie je nog steeds welke kleur het is, plus voor mensen die blind zijn kunnen het checken-->
         </section>
 

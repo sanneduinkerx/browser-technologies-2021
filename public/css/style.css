@@ -54,7 +54,7 @@ header svg{
     position: relative; /* test */
 }
 
-svg + p{
+img + p{
     position: absolute; /* test */
     top: 19em;
     left: 0;
@@ -157,7 +157,7 @@ fieldset div > p, label[for=text]{
 
 /* Logo sizes - img on shirt */
 
-.formLayout img[src] {
+img[src] {
     width: 170px;
     height: 80px;
     transition: .3s ease-in-out; /* test */

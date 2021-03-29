@@ -4,8 +4,6 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 const {v4 : uuidv4} = require('uuid')
 
-// const rawData = fs.readFileSync('public/data/data.json');
-
 // Create Express app
 const app = express()
 const userId = uuidv4()
@@ -23,7 +21,14 @@ app.get('/', function(req, res){
 }); 
 
 app.get('/overzicht', function(req, res){
-    res.render('overzicht')
+    const rawData = fs.readFileSync('public/data/design.json');
+    const data = JSON.parse(rawData);
+
+    res.render('overzicht', {
+        color: data.userDesign.color,
+        text: data.userDesign.text,
+        fanBaseImg: data.userDesign.fanBaseImg,
+    });
 })
 
 app.get('/shirtMaker', function(req, res){ 
@@ -62,8 +67,6 @@ app.get('/bestel', function(req, res){
         color: data.userDesign.color,
         text: data.userDesign.text,
         fanBaseImg: data.userDesign.fanBaseImg,
-        type: data.userDesign.type,
-        size: data.userDesign.size
     });
 })
 
