@@ -13,35 +13,22 @@ function localStorageDetection(){
     }
 }
 
+// if localstorage detection is true, from the test above it executes this otherwise it doesnt do anything
 if(localStorageDetection() === true){
-    console.log('localstorage on')
+    console.log('localstorage on');
+    localStorage.clear;
 
-    const colorChoice = document.querySelectorAll('input[name=color]');
-    const imgChoice = document.querySelectorAll('input[name=fanBaseImg]');
-    const textChoice = document.querySelector('input[type=text]');
-
-    //adding form values to localstorage
-    //when user clicks a color it gets added to localstorage
-    colorChoice.forEach(item => {
-        item.addEventListener('change', function addColor(){
-             // getting the value from the clicked input
-            const color = this.value;
-            localStorage.setItem('color', `${color}`);
-        });
-    })
-
-    imgChoice.forEach(item => {
-        item.addEventListener('change', function addImg(){
-             // getting the value from the clicked input
-            const img = this.value;
-            localStorage.setItem('img', `${img}`);
-        });
-    })
-
-    textChoice.addEventListener('change', function addText(){
-            const text = this.value;
-            localStorage.setItem('text', `${text}`);
-    })
+        //selecting elements from dom
+        const formInput = document.querySelectorAll('input');
+        //adding name and value of all inputs to localstorage
+        formInput.forEach(item => {
+            item.addEventListener('change', function addLS(){
+                // getting the value from the clicked input
+                const key = this.name;
+                const value = this.value;
+                localStorage.setItem(`${key}`, `${value}`);
+            });
+        })
 
     console.log(localStorage)
 
