@@ -296,6 +296,20 @@ fieldset label input[type=radio]:checked {
     height: 15px;
 }
 
+/* bevestiging */
+
+.bevestiging{
+    max-width: 20em;
+    max-height: 10em;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 /*****************************************/
 /************** RESPONSIVE **************/
 /***************************************/
