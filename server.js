@@ -88,31 +88,68 @@ app.get('/bestel', function(req, res){
     });
 })
 
-app.post('/bestel', function(req, res){
-    const rawData = fs.readFileSync('public/data/design.json');
-    const designData = JSON.parse(rawData);
-    
-    const dataObj = {
-        userId: designData.userId, 
-        userData: {
-            type: `${req.body.type}`,
-            size:  `${req.body.size}`,
-            ammount: `${req.body.ammount}`,
-            firstname: `${req.body.firstname}`,
-            lastname: `${req.body.surname}`,
-            email: `${req.body.userMail}`,
-        }
-    }
+app.post('/bestel', urlencodedParser, [
+    check('type', 'kies voor wie het t-shirt is')
+        .exists(),
 
-    // stringify so its readable
-    const data = JSON.stringify(dataObj, null, 2);
-    //write to file data.json
-    fs.writeFile('public/data/userData.json', data, finished); 
-    function finished(err){
-        console.log('all set');
-        // res.redirect(`/gegevens/${userId}`);
-        res.redirect('/bevestiging')
-    }
+    check('size', 'Waho! Je bent nog vergeten een maat aan te geven')
+    .exists(),
+
+    check('ammount', 'Aho! Vergeet niet het aantal in te vullen')
+        .exists()
+        .isNumeric(),
+    
+    check('firstname', 'Waho! vergeet niet je voornaam in te voeren')
+        .exists()
+        .isLength({ min: 1, max: 50 }),
+    
+    check('surname', 'Waho! vergeet niet je achternaam in te voeren')
+        .exists()
+        .isLength({ min: 1, max: 50 }),
+
+    check('userMail', 'Waho! Je bent vergeten een e-mail adres in te voeren')
+        .exists()
+        .isEmail({ min: 1, max: 50 }),
+
+], function(req, res){
+    const rawData = fs.readFileSync('public/data/design.json');
+    const data = JSON.parse(rawData);
+    const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            // return res.status(400).json({ errors: errors.array() });
+            const alert = errors.array();
+            res.render('bestel', {
+                alert,
+                color: data.userDesign.color,
+                text: data.userDesign.text,
+                fanBaseImg: data.userDesign.fanBaseImg,
+            })
+        } else{
+
+            const dataObj = {
+                userId: designData.userId, 
+                userData: {
+                    type: `${req.body.type}`,
+                    size:  `${req.body.size}`,
+                    ammount: `${req.body.ammount}`,
+                    firstname: `${req.body.firstname}`,
+                    lastname: `${req.body.surname}`,
+                    email: `${req.body.userMail}`,
+                }
+            }
+
+            // stringify so its readable
+            const data = JSON.stringify(dataObj, null, 2);
+            //write to file data.json
+            fs.writeFile('public/data/userData.json', data, finished); 
+            function finished(err){
+                console.log('all set');
+                // res.redirect(`/gegevens/${userId}`);
+                res.redirect('/bevestiging')
+            }
+
+        }
+    
 })
 
 app.get('/bevestiging', function(req, res){

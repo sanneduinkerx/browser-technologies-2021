@@ -15,17 +15,18 @@
         </section>
 
         <section>
-            
-            <% if(typeof alert != 'undefined') { %>
-                <% alert.forEach(function(error) { %>
-                    <div class="errorMsg" role="alert">
-                        <%= error.msg %>
-                     
-                      </div>
-                <% }) %>
-            <% } %>
-       
 
+            <ul>
+                <% if(typeof alert != 'undefined') { %>
+                    <% alert.forEach(function(error) { %>
+                        <li class="errorMsg">
+                            <%= error.msg %>
+                         
+                        </li>
+                    <% }) %>
+                <% } %>
+
+            </ul>
             <form action="/shirtMaker" method="post" id="shirtMaker">
 
                 <fieldset>

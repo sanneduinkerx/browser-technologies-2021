@@ -51,15 +51,18 @@
         </section>
 
         <section>
-            
-            <% if(typeof alert != 'undefined') { %>
-                <% alert.forEach(function(error) { %>
-                    <div class="errorMsg" role="alert">
-                        <%= error.msg %>
-                     
-                      </div>
-                <% }) %>
-            <% } %>
+            <ul>
+                <% if(typeof alert != 'undefined') { %>
+                    <% alert.forEach(function(error) { %>
+                        <li class="errorMsg">
+                            <%= error.msg %>
+                         
+                        </li>
+                    <% }) %>
+                <% } %>
+
+            </ul>
+           
 
             <form action="/bestel" method="post" id="info">
 
@@ -70,7 +73,7 @@
                         <p>Voor wie is het t-shirt?</p>
             
                         <label for="vrouw">
-                            <input type="radio" id="vrouw" name="type" value="vrouw" required>
+                            <input type="radio" id="vrouw" name="type" value="vrouw">
                             Vrouw
                         </label>
             
@@ -86,7 +89,7 @@
                     
                     
                     <label for="extrasmall">
-                        <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
+                        <input type="radio" id="extrasmall" name="size" value="extrasmall">
                         XS
                     </label>
                     
@@ -127,13 +130,13 @@
     
                     <div>
                         <label for="text">Wat is jouw naam?</label>
-                        <input type="text" id="textFirstname" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
-                        <input type="text" id="textLastname" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
+                        <input type="text" id="textFirstname" name="firstname" maxlength="50" size="35" placeholder="Voornaam">
+                        <input type="text" id="textLastname" name="surname" maxlength="50" size="35" placeholder="Achternaam">
                     </div>
     
                     <div>
                         <label for="email">Wat is je E-mail</label>
-                        <input type="email" id="email" name="userMail">
+                        <input type="email" id="email" name="userMail" size="35">
                     </div>
 
                 </fieldset>
