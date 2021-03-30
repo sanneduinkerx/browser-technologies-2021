@@ -3,21 +3,21 @@
 Bij het van Browser Technologies heb ik geleerd over progressive enhancement en hoe ik een robuuste, toegankelijk website maak. Waarbij de gebruiker de core functies kan doen.
 
 ## inhoudsopgave
-- [Use Case 🤓]()
-- [De Demo 🕸]()
-    - [Core functionaliteiten 📋]()
-    - [features in Demo ✨]()
-    - [Wireflow 💻]()
-- [3 lagen 🍰]()
-    - [Functional/reliable layer]()
-    - [Usable layer]()
-    - [The pleasurable layer]()
-- [Feature Detection 🕵🏼‍♀️]()
-    - [T-shirt updaten 👚]()
-    - [LocalStorage 📀]()
-- [Testen in browser 🌐]()
-- [Tools  🔨]()
-- [Bronnen 📚]()
+- [Use Case 🤓](#use-case-)
+- [De Demo 🕸](#de-demo---nerdy-shirt-maker-)
+    - [Core functionaliteiten 📋](#core-functionaliteiten-)
+    - [features in Demo ✨](#features-in-demo-)
+    - [Wireflow 💻](#wireflow-)
+- [3 lagen 🍰](#de-3-lagen-)
+    - [Functional/reliable layer](#functionalreliable-layer)
+    - [Usable layer](#usable-layer)
+    - [The pleasurable layer](#the-pleasurable-layer)
+- [Feature Detection 🕵🏼‍♀️](#feature-detection-%EF%B8%8F)
+    - [T-shirt updaten 👚](#t-shirt-updaten-)
+    - [LocalStorage 📀](#localstorage-)
+- [Testen in browser 🌐](#testen-in-4-browsers-)
+- [Tools  🔨](#gebruikte-tools-om-te-testen--)
+- [Bronnen 📚](#sources-)
 
 # Use case 🤓: 
 **Nerdy T-shirt**
@@ -45,10 +45,9 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 - Afbeeldingen op shirt
 
 ## Wireflow 💻
-versie 2:
 ![](https://user-images.githubusercontent.com/60745348/112509718-05ae1080-8d91-11eb-8ca9-c49333c56346.png)
 
-Zie [versie 1](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Eindopdracht#wireflow)
+Bekijk [eerste versie](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Eindopdracht#wireflow)
 <!-- versie 1: -->
 <!-- ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
 ![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png) -->
@@ -64,13 +63,12 @@ Op deze laag kan de gebruiker dus het shirt ontwerpen via een formulier, checken
 
 ## Usable layer
 Deze laag verbeterd de gebruikerservaring, maakt het fijner voor de gebruiker om de website te gebruiken en voegt de smaak toe aan de demo.
-de css enhancements, verbeteren van de buttons en het formulier zodat het er niet meer uit ziet als een saai formulier, hidden van radio buttons!, maak er knoppen  van.
-principle: appearance follows behaviour -> buttons
+Bij deze laag is het een stuk beter om naar het ontwerp te kijken. Door styling van het formulier en opfleuren van de webpagine ziet het er minder uit als een formulier, en is het voor de gebruiker fijner te gebruiken. Ik heb goed gedacht aan principle: appearance follows behaviour, bij de buttons. Ook heb ik states toegepast dus als de gebruiker hovert over een afbeelding dan wordt dat groter en als je focust op de input text wordt de border dikker. 
 
 ![](https://user-images.githubusercontent.com/60745348/113050361-08e83880-91a5-11eb-86c3-e21366ae3c65.png)
 
 ## The pleasurable layer
-localstorage, live updaten
+Dit is de kers op de taart, dit maakt de ervaring een geheel voor de gebruiker. Bij deze laag ziet de gebruiker wanneer hij/zij keuzes maakt over zijn/haar ontwerp meteen de veranderingen bij het shirt. Daarnaast maak ik gebruik van localStorage dus als de gebruiker even weggaat of de pagina refreshed of bijvoorbeeld een stap terug gaat is het formulier nog ingevuld en scheelt dit tijd voor de gebruiker. 
 
 ![](https://user-images.githubusercontent.com/60745348/113050366-0ab1fc00-91a5-11eb-855b-c96a9d39167a.png)
 
@@ -134,7 +132,7 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
 - Server side, express node - [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
 - Data in JSON File - [YouTube, The Coding Train](https://www.youtube.com/watch?v=6iZiqQZBQJY)
 - Express validator -[Raddy The Brand](https://raddy.co.uk/blog/node-js-form-validation-using-express-validator-and-ejs/)
-- [stackoverflow](https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available)
+- Check if localstorage is available - [stackoverflow](https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available)
 - How to Structure a web form - [Developer Mozilla](https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form)
 - How to start a node server? - [stackabuse](https://stackabuse.com/how-to-start-a-node-server-examples-with-the-most-popular-frameworks/?)
 - Can i use conditional statements with ejs - [stackoverlow](https://stackoverflow.com/questions/8216918/can-i-use-conditional-statements-with-ejs-templates-in-jmvc)
