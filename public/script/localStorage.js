@@ -10,7 +10,7 @@ function localStorageDetection(){
         return true;
     } catch(e) {
         return false;
-    }
+    } 
 }
 
 // if localstorage detection is true, from the test above it executes this otherwise it doesnt do anything
@@ -77,13 +77,19 @@ if(localStorageDetection() === true){
         //if colorChoice is available and doesnt give error then do whats in there 
         // had error first on bestelform cause couldnt find colorChoice of undefined
         if(colorChoice){
-            
-                // that input element is checked:
-                colorChoice.checked=true;
+
+            if(color === null){
+                 // do nothing
+            } else{
+                 // that input element is checked:
+                 colorChoice.checked=true;
                  //on refresh also keep the color of t shirt preview
                 const shirtSVG = document.getElementsByClassName('shirtColor');
                 shirtSVG[0].style.fill = `${color}`;
-            
+            }
+            if(img === null){
+                 // do nothing
+            } else{
                 imgChoice.checked=true;
                 switch (img){
                     case 'Marvel' :
@@ -106,18 +112,57 @@ if(localStorageDetection() === true){
                         imgElement.removeAttribute('alt');
                         break;
                 }
+                 
+            }
 
-                textChoice.value = `${text}`;
-                textShirt.textContent = `${text}`;
+                // check if localstorage is not empty, otherwise it fills in 'null' in form, thats confusing to user
+                if(text === null){
+                     // do nothing
+                } else{
+                    textChoice.value = `${text}`;
+                    textShirt.textContent = `${text}`;
+                }
 
         } else if(typeChoice){
-            //bestel
-                typeChoice.checked=true;
-                sizeChoice.checked=true;
-                ammountChoice.value = `${ammount}`;
-                userName.value = `${firstName}`;
-                userlastName.value = `${lastName}`;
-                userEmail.value = `${userMail}`;   
+            //bestel 
+                if(ammount === null){
+                     // do nothing
+                } else{
+                    ammountChoice.value = `${ammount}`;
+                }
+
+                if(type === null){
+                    // do nothing
+                } else{
+                    typeChoice.checked=true;
+                }
+
+                if(size === null){
+                    // do nothing
+                } else{
+                    sizeChoice.checked=true;
+                }
+
+                if(firstName === null){
+                     // do nothing
+                } else{
+                    userName.value = `${firstName}`;
+                }
+
+                if(lastName === null){
+                     // do nothing
+                } else{
+                    userlastName.value = `${lastName}`;
+                }
+
+                if(userMail === null){
+                     // do nothing
+                } else{
+                    userEmail.value = `${userMail}`;   
+                }
+                
+               
+               
         }
 
     })
