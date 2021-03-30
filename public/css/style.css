@@ -360,8 +360,4 @@ fieldset label input[type=radio]:checked {
         max-height: 11em;
      
     }
-
-  /* USE THIS IN CSS AND OBJECT DETECTION IN JS FOR PE donr forget */
-  /* @support {
-
-  } */
+}
