@@ -35,7 +35,6 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 - Shirt kunnen ontwerpen (via form)
 - bestellen van ontworpen shirt
 - checken of ontworpen shirt goed is
-- form validatie, error message
 
 ## features in Demo ✨
 - Live updaten t-shirt wanneer gebruiker shirt ontwerpt
