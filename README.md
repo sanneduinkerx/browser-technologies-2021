@@ -15,6 +15,7 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 - [Feature Detection 🕵🏼‍♀️](#feature-detection-%EF%B8%8F)
     - [T-shirt updaten 👚](#t-shirt-updaten-)
     - [LocalStorage 📀](#localstorage-)
+- [Conclusie](#conclusie)
 - [Testen in browser 🌐](#testen-in-4-browsers-)
 - [Tools  🔨](#gebruikte-tools-om-te-testen--)
 - [Bronnen 📚](#sources-)
@@ -117,6 +118,11 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
 - firefox - laptop [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen-firefox---laptop-macbook-pro)
 - Chrome - Android telefoon [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-Chrome-Android---Pixel)
 - Safari IOS - Iphone 7 [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-safari-IOS---iphone-7)
+
+# Conclusie
+Ik heb veel geleerd binnen dit vak over het opbouwen in lagen en de manier van denken. Normaal gesproken begon ik meteen en ik heb meestal alleen chrome open om te checken of het werkt of niet maar nooit veel andere browsers om te testen. Ik ga er zelf vanuit dat iedereen wel chrome gebruikt maar dat is natuurlijk niet zo. Ik ben gewend geraakt goed te checken of iets op een bepaalde browser werkt of niet en met feature detection dus eerst te checken en een fallback als iets niet werkt. Ik checkte dus ook veel met het uitzetten van js of de functies nog werkte en bijvoorbeeld als de afbeeldingen uitstaan dat het wel duidelijk is wat er hoort te staan met alt text. Daarnaast checkte ik dus ook meer met toetsenbord en kwam daar dus ook tegen dingen aan die ik snel fix. 
+
+Deze manier van werken was nieuw voor mij en om een website toegankelijk te maken voor iedereen is dit een fascinerende manier om een website op te bouwen met lagen. Ik bleef ook steeds in mijn hoofd met of de belangrijkste functies werken zodat als iets wegvalt dat nog werkt en dat geeft je wel meer zekerheid binnen een gebouwde website.
 
 ## Gebruikte tools om te testen  🔨
 - De site [caniuse.com](https://caniuse.com/)
