@@ -17,7 +17,8 @@
         <section>
 
             <ul>
-                <% if(typeof alert != 'undefined') { %>
+                <% if(typeof alert !== 'undefined') { %>
+                    <!-- te kort tijd en weinig kennis om dit ui friendly te maken -->
                     <% alert.forEach(function(error) { %>
                         <li class="errorMsg">
                             <%= error.msg %>
@@ -65,7 +66,7 @@
                             <input type="radio" id="purple" name="color" value="purple">
                             Paars
                         </label>
-            
+
                     </div>
                    
                     <div>
@@ -75,6 +76,7 @@
                         </label>
                         
                         <p><i>Bv. 'I. AM. IRON. MAN.'</i></p>
+
                     </div>
             
                     <div>

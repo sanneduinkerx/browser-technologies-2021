@@ -1,60 +1,117 @@
 # Browser Technologies @cmda-minor-web 20-21
 
-In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement is en hoe je dit kan toepassen om goede, robuuste, toegankelijke websites te maken. Voor iedereen. Het web is voor iedereen, in dit vak leer je hoe je daarvoor kan zorgen.
+Bij het van Browser Technologies heb ik geleerd over progressive enhancement en hoe ik een robuuste, toegankelijk website maak. Waarbij de gebruiker de core functies kan doen.
 
-### De demo - Nerdy Shirt maker
-[Live demo](nerdy-shirt-maker.herokuapp.com/)
-
-<!-- [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/) -->
-
-# Gekozen use case: 
+# Use case: 
 **Nerdy T-shirt**
 *Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, opslaan, bestellen, en een volgende keer dat ik de site bezoek kunnen gebruiken.*
 
 ## Wireflow
 versie 2:
-
 ![](https://user-images.githubusercontent.com/60745348/112509718-05ae1080-8d91-11eb-8ca9-c49333c56346.png)
 
+Zie [versie 1](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Eindopdracht#wireflow)
 <!-- versie 1: -->
 <!-- ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
 ![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png) -->
 
+## De demo - Nerdy Shirt maker
+[Live demo](nerdy-shirt-maker.herokuapp.com/)
+
+<!-- [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/) -->
+
 ### Core-Functionaliteiten:
 - Shirt kunnen ontwerpen (via form)
-<!-- - Eerder gemaakte shirts herzien -->
 - bestellen van ontworpen shirt
+- checken of ontworpen shirt goed is
+- form validatie, error message
 
-<!-- - Ontwerpen van shirt met een form
-    - met kleur, tekst etc
-    - Maat en voor wie het shirt is aangeven 
-    - verdere gegevens: naam en email 
-    - data moet kunnen verstuurt worden naar server
+### features in Demo:
+- Live updaten t-shirt wanneer gebruiker shirt ontwerpt
+- Localstorage - bij refreshen of later terug komen form nog steeds ingevuld
+- Data opslaan in een JSON file en ophalen op server
+- Form validatie
+- Afbeeldingen op shirt
 
-- Nog een shirt kunnen ontwerpen
+# De 3 lagen
 
-- Jouw ontworpen shirts inzien:
-    - in overzichtpagina, al je ontworpen shirts kunnen inkijken
-    - en later nog terug kunnen gaan om je ontwerpen in te zien of waar je gebleven was
+## Functional/reliable layer
+Deze laag bevat de core functionaliteiten en moet op alle browsers bereikt kunnen worden. De HTML paginas zijn te serveren op alle browser pagina's. De reliable layer bevat de html forms en de data op de server. De gebruiker kan het formulier invullen en aangeven hoe hij/zij het ontworpen shirt eruit wilt laten zien. Daarna bij de bestelpagina kan de gebruiker dan checken of het shirt goed is en zo niet, kan de gebruiker terug om dit aan te passen. Wanneer gebruiker klaar is met het invullen van een formulier en dit verstuurt wordt de data opgeslagen in een JSON file om later weer te gebruiken bij de bestelpagina. 
 
-- Bestel pagina met gevorderde gegevens om je shirt te kopen -->
+Op deze laag kan de gebruiker dus het shirt ontwerpen via een formulier, checken van het shirt en bestellen, de belangrijkste functies. En dit is allemaal mogelijk alleen met html. Waarbij ook wordt aangegeven wanneer iets niet is ingevuld met express-validator op server side.
 
-### Testen in 4 browsers:
+IMG HERE
 
-- Chrome - laptop
-- firefox - laptop
-- Chrome - Android telefoon
-- Safari IOS - Iphone 7
+## Usable layer
+Deze laag verbeterd de gebruikerservaring, maakt het fijner voor de gebruiker om de website te gebruiken en voegt de smaak toe aan de demo.
+de css enhancements, verbeteren van de buttons en het formulier zodat het er niet meer uit ziet als een saai formulier, hidden van radio buttons!, maak er knoppen  van.
+principle: appearance follows behaviour -> buttons
 
-### wishlist
-Dingen die ik in de toekomst nog wil toepassen:
-- overzicht van alle eerdere gemaakte shirts op home pagina
-- een shirt kunnen wijzigen
+IMG HERE
+
+## The pleasurable layer
+localstorage, live updaten
+
+IMG HERE
+
+## Feature Detection
+
+**T-shirt updaten**
+
+Wanneer de Javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt wordt de svg niet getoont aan de gebruiker waar de updates gebeuren, ervaart de gebruiker deze pleasurable laag niet. Omdat de svg dan niet getoont wordt weet de gebruiker ook niet wat hij/zij mist en kan daarnaast alsnog de belangrijkste functies behalen. Gebruiker ziet nog steeds bij de bestelpagina hoe zijn ontwerp eruit ziet, maar mist alleen de extra ervaring.
+
+**LocalStorage**
+
+Het kan dus zijn dat een gebruiker cookies uit heeft staan dan werkt de localstorage niet.
+Voor localstorage heb ik de volgende code gebruikt om te testen of de gebruiker localStorage beschikbaar heeft:
+Dit stukje code heb ik gevonden via: [https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available](https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available)
+Ik gebruikte namelijk eerst if(typeof(Storage) !== "undefined"), maar dit werktte niet goed.
+
+```
+    function localStorageDetection(){
+        const test = 'test';
+        try {
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+            return true;
+        } catch(e) {
+            return false;
+        } 
+    }
+
+    // if localstorage detection is true, from the test above it executes this otherwise it doesnt do anything
+    if(localStorageDetection() === true){
+        // code om localstorage te gebruiken
+    } else {
+        //niks doen
+    }
+
+```
+
+Wat hierboven gebeurt is een test en gaat kijken of js iets kan toevoegen aan de localstorage zo ja, dan is de test True, als dat niet zo is en het failed dan geeft hij false terug en gaat er niks gebeuren.
+
+Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan later terug kan komen of als je per ongeluk refreshed is de data er nog steeds. Staat het wel uit dan mist de gebruiker deze ervaring, maar dat is niet heel erg omdat het geen hele lange formulieren zijn en de gebruiker kan nog steeds ontwerpen en bestellen, want de data wordt ook opgeslagen in een JSON file.
+
+## Testen in 4 browsers:
+
+- Chrome - laptop [link here]
+- firefox - laptop [link here]
+- Chrome - Android telefoon [link here]
+- Safari IOS - Iphone 7 [link here]
+
+## Gebruikte tools om te testen:
+- Web developer via extensions, 
+    voor het uit en aanzetten van css en js (zie de 3 lagen voor resultaat)
+    checken wanneer afbeeldingen uit staan (zie resultaten hier)
+    cookies uitzetten
+- Colorblind - checken of het nog te zien is voor mensen met kleurenblindheid (zie resultaat hier)
+- []() voor het valideren html en css (zie uitkomsten uit validatie [hier]())
 
 # Sources
 - [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
 - [https://www.youtube.com/watch?v=6iZiqQZBQJY](https://www.youtube.com/watch?v=6iZiqQZBQJY)
 - Express validator - [Raddy The Brand](https://raddy.co.uk/blog/node-js-form-validation-using-express-validator-and-ejs/)
+- https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 

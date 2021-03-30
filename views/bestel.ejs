@@ -52,7 +52,7 @@
 
         <section>
             <ul>
-                <% if(typeof alert != 'undefined') { %>
+                <% if(typeof alert !== 'undefined') { %>
                     <% alert.forEach(function(error) { %>
                         <li class="errorMsg">
                             <%= error.msg %>
