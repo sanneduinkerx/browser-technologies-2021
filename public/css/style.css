@@ -163,15 +163,6 @@ text {
     right: 0;
 }
 
-
-/* links that also works like button, same look */
-main a{
-    text-decoration: none;
-    color: black;
-    max-width: 10em;
-    text-align: center;
-}
-
 /***********************************/
 /************** FORM **************/
 /*********************************/
@@ -195,6 +186,8 @@ fieldset legend{
     position: relative;
     top: 1em;
     text-transform: uppercase;
+    /* in firefox ging legend niet in het midden in chrome wel */
+    margin: auto;
 }
 
 fieldset div{
@@ -237,7 +230,7 @@ fieldset div label:hover{
 
 /* button */
 
-form button, main a {
+form button{
     border: black solid 2px;
     padding: .1em 2em;
     box-shadow:  5px 5px 0px black;
@@ -254,7 +247,7 @@ form button p{
 
 /* States */
 
-form button:hover,  main a:hover, form button:focus,  main a:focus{
+form button:hover, form button:focus{
     box-shadow: 10px 10px 0px black;
     -webkit-box-shadow: 10px 10px 0px black;
     cursor: pointer;
@@ -265,7 +258,7 @@ form label:hover{
     font-weight: 700;
 }
 
-form button:hover p, form button:focus p,  main a:hover,  main a:focus{
+form button:hover p, form button:focus p{
     font-weight: 700;
 }
 fieldset div label:hover{

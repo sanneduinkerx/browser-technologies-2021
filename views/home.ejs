@@ -5,8 +5,14 @@
     <main class="home">
         <section>
             <h1>Maak je eigen Nerdy <span>&#129299;</span> Shirt!</h1>
-            <!-- link not accesible in firefox fix later -->
-           <a href="/shirtMaker">Snel beginnen!</a>
+            <!-- link is niet toegankelijk in newest firefox version -->
+            <!-- dit los je op in instellingen, ik kan het ook niet beinvloeden met tabindex -->
+            <!-- <a href="/shirtMaker">Snel beginnen!</a> -->
+
+           <!-- daarom fake ik nu een form met button -->
+           <form method="get" action="/shirtMaker">
+                <button type="submit">Snel beginnen!</button>
+            </form>
         </section>
     </main>
 </body>

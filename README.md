@@ -135,6 +135,7 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
 - How to Structure a web form - [Developer Mozilla](https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form)
 - How to start a node server? - [stackabuse](https://stackabuse.com/how-to-start-a-node-server-examples-with-the-most-popular-frameworks/?)
 - Can i use conditional statements with ejs - [stackoverlow](https://stackoverflow.com/questions/8216918/can-i-use-conditional-statements-with-ejs-templates-in-jmvc)
+- How to create html burron that acts like a link[stackoverflow](https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link)
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
