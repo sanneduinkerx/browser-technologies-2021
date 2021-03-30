@@ -21,7 +21,7 @@ Zie [versie 1](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/E
 ## De demo - Nerdy Shirt maker
 [Live demo](nerdy-shirt-maker.herokuapp.com/)
 
-IMG HERE
+![](https://user-images.githubusercontent.com/60745348/113047231-5bbff100-91a1-11eb-9835-24baa17f7770.png)
 
 <!-- [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/) -->
 
@@ -45,7 +45,7 @@ Deze laag bevat de core functionaliteiten en moet op alle browsers bereikt kunne
 
 Op deze laag kan de gebruiker dus het shirt ontwerpen via een formulier, checken van het shirt en bestellen, de belangrijkste functies. En dit is allemaal mogelijk alleen met html. Waarbij ook wordt aangegeven wanneer iets niet is ingevuld met express-validator op server side.
 
-IMG HERE
+![](https://user-images.githubusercontent.com/60745348/113032890-aedd7800-9190-11eb-80ef-072da64794f2.png)
 
 ## Usable layer
 Deze laag verbeterd de gebruikerservaring, maakt het fijner voor de gebruiker om de website te gebruiken en voegt de smaak toe aan de demo.
@@ -113,11 +113,16 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
     om te checken wat voor features support zijn op welke browsers
 - Web developer via extensions, 
     voor het uit en aanzetten van css en js (zie de 3 lagen voor resultaat)
-    checken wanneer afbeeldingen uit staan (zie resultaten [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#img-uit))
+    checken wanneer afbeeldingen uit staan 
+    <!-- later in readme? -->
     cookies uitzetten 
 - Colorblind
-    checken of het nog te zien is voor mensen met kleurenblindheid (zie resultaat [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#kleurenblind))
-- []() voor het valideren html en css (zie uitkomsten uit validatie [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#validatie-html-en-css))
+    checken of het nog te zien is voor mensen met kleurenblindheid 
+    <!-- later in readme zetten? -->
+- [validator w3](validator.w3.or) - HTML validator 
+    <!-- later in readme? -->
+- CSS validator 
+    <!-- later in readme? -->
 
 # Sources
 - [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)

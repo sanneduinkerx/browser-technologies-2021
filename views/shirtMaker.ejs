@@ -21,6 +21,8 @@
                     <!-- te kort tijd en weinig kennis om dit ui friendly te maken -->
                     <% alert.forEach(function(error) { %>
                         <li class="errorMsg">
+                            <img src="img/error.png" alt="error icon">
+                        
                             <%= error.msg %>
                          
                         </li>
@@ -33,7 +35,7 @@
                 <fieldset>
                     <legend> Ontwerp T-Shirt</legend>
             
-                    <div>
+                    <div class="color">
                         <p>Kies je kleur</p>
                         <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
             
@@ -109,7 +111,7 @@
                 </fieldset>
         
             
-                <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
+                <button type="submit" form="shirtMaker" value="Submit" id="submitButton">Volgende</button>
             
             </form>
 

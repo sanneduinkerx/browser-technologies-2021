@@ -7,10 +7,9 @@ body{
     color:white;
     margin: 0;
     box-sizing: border-box;
-    hyphens: auto;
 }
 
-body, p, fieldset div input[type=text], fieldset div input[type=email], text {
+body, p, fieldset div input[type=text], fieldset div input[type=email], text, button {
     font-family: 'Space Mono', monospace;
 }
 
@@ -20,10 +19,26 @@ i{
 
 h1 {
     text-align: center;
+    font-size: 26px;
+    margin: .5em;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 li {
     list-style: none;
+}
+
+button {
+    font-size: 16px;
 }
 
 /*************************************/
@@ -47,36 +62,37 @@ header svg{
 
 /* section + shirt */
 
+main svg{
+    width: 250px;
+}
+
 .shirtColor{
     fill: white;
     stroke:#000;
 }
 
 .formBestel section:first-of-type{
-     display: flex; /* eerst grid gebruikt, maar op caniuse.com is flex meer supported en vangt beter op */
-    -webkit-display: flex; /* chrome en safari*/
-    -moz-display: flex; /* firefox */
-    justify-content: center;
-    -webkit-justify-content: center; 
-    -moz-justify-content: center; 
-    flex-direction: column; 
-    -webkit-flex-direction: column; 
-    -moz--flex-direction: column; 
-    align-items: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    text-align: center;
-    position: relative; /* test */
+    justify-content: center; 
+     display: grid; 
+    grid-template-rows: 0fr 1fr; 
+    position: relative;
 }
 
 #svgShow p:first-of-type{
-    position: absolute; /* test */
-    top: 19em;
+    position: absolute;
+    top: 20em;
     left: 0;
     right: 0;
+    font-size: 12px;
     
-    mix-blend-mode: difference; /* test */
+    mix-blend-mode: difference;
+    text-align: center;
 }
+
+#svgShow p.color{
+    display:none
+}
+
 text {
     text-align: center;
     font-size: 7px;
@@ -108,7 +124,14 @@ text {
 
 .formLayout section:nth-of-type(2) div:last-of-type{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
+.formLayout section:nth-of-type(2) div:last-of-type p{
+    grid-area: 1 / 1 / 1 / 3
+}
+
 
 /* home page*/
 
@@ -117,8 +140,12 @@ text {
     height: 100vh;
 }
 
+.home section h1 {
+    font-size: 24px;
+}
+
 .home section{
-    max-width: 25em;
+    max-width: 20em;
     max-height: 10em;
     text-align: center;
     border: white 5px solid;
@@ -130,9 +157,6 @@ text {
     right: 0;
 }
 
-.home section h1{
-    font-size: 32px;
-}
 
 /* links that also works like button, same look */
 main a{
@@ -157,7 +181,7 @@ fieldset{
     box-shadow:  5px 5px 0px black;
      /* old version of safari didn't support it  */
      -webkit-box-shadow:  5px 5px 0px black;
-    margin: 1em auto;
+     margin: 1em;
 }
 
 fieldset legend{
@@ -166,6 +190,10 @@ fieldset legend{
 
 fieldset div{
     margin: 20px 0px;
+}
+
+fieldset label[for=ammount], fieldset label[for=email]{
+    font-weight: 700;
 }
 
 /* text */
@@ -177,8 +205,8 @@ fieldset div > p, label[for=text]{
 /* Logo sizes - img on shirt */
 
 img[src] {
-    width: 170px;
-    height: 80px;
+    width: 100px;
+    height: 50px;
     transition: .3s ease-in-out; /* test */
 }
 
@@ -225,6 +253,7 @@ form button:hover,  main a:hover, form button:focus,  main a:focus{
 
 form label:hover{
     transform: translate(1.1); /* test */
+    font-weight: 700;
 }
 
 form button:hover p, form button:focus p,  main a:hover,  main a:focus{
@@ -258,7 +287,13 @@ fieldset label input[type=radio]:checked {
     border: white 2px solid;
     padding: .1em;
     text-align: center;
-    margin: .5em;
+    margin: .5em auto;
+    max-width: 21em;
+}
+
+.errorMsg img{
+    width: 15px;
+    height: 15px;
 }
 
 /*****************************************/
@@ -269,14 +304,44 @@ fieldset label input[type=radio]:checked {
 
 @media (min-width: 768px) {
 
+    h2{
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    main svg{
+        width: 350px;
+    }
+
     header{
         flex-direction: row; /* test */
     }
     
+    fieldset {
+        margin: 2em auto;
+    }
+
+    img[src] {
+        width: 170px;
+        height: 80px;
+        transition: .3s ease-in-out; /* test */
+    }
+
+    .errorMsg img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .home section h1 {
+        font-size: 30px;
+    }
+
     /************** LAYOUT **************/
     .formBestel, .formLayout.show   {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+        /* align-items: center; */
     }
 
     .formBestel > h1 {
@@ -284,7 +349,17 @@ fieldset label input[type=radio]:checked {
         grid-column-end: 3;
     }
 
+    #svgShow p:first-of-type {
+        top: 19em;
+        font-size: 16px;
+
   }
+
+    .home section{
+        
+        max-height: 11em;
+     
+    }
 
   /* USE THIS IN CSS AND OBJECT DETECTION IN JS FOR PE donr forget */
   /* @support {

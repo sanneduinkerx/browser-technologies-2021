@@ -46,7 +46,7 @@
             
                 <p><%= text %></p>
                 <!-- display none doen in css dat wnnr css uit is je de kleur wel ziet -->
-                <p> Kleur shirt: <%= color %></p>
+                <p class="color"> Kleur shirt: <%= color %></p>
                 <!-- if css disabled: dan zie je nog steeds welke kleur het is, plus voor mensen die blind zijn kunnen het checken-->
         </section>
 
@@ -55,6 +55,7 @@
                 <% if(typeof alert !== 'undefined') { %>
                     <% alert.forEach(function(error) { %>
                         <li class="errorMsg">
+                            <img src="img/error.png" alt="error icon">
                             <%= error.msg %>
                          
                         </li>
@@ -141,7 +142,7 @@
 
                 </fieldset>
     
-                <button type="submit" form="info" value="Submit" id="submitButton"> <p>Bestel!</p></button>
+                <button type="submit" form="info" value="Submit" id="submitButton"> Bestel!</button>
     
             </form>
 
