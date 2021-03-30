@@ -26,7 +26,7 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 *Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, opslaan, bestellen, en een volgende keer dat ik de site bezoek kunnen gebruiken.*
 
 # De demo - Nerdy Shirt maker 👚
-[Live demo](nerdy-shirt-maker.herokuapp.com/)
+[Live demo](https://nerdy-shirt-maker.herokuapp.com/)
 
 ![](https://user-images.githubusercontent.com/60745348/113047231-5bbff100-91a1-11eb-9835-24baa17f7770.png)
 
