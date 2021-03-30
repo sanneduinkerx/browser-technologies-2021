@@ -64,6 +64,7 @@ header svg{
 
 main svg{
     width: 250px;
+    margin: 1em;
 }
 
 .shirtColor{
@@ -126,6 +127,11 @@ text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.formLayout section:nth-of-type(2) div:last-of-type label{
+    justify-content: center;
 }
 
 .formLayout section:nth-of-type(2) div:last-of-type p{
@@ -186,6 +192,9 @@ fieldset{
 
 fieldset legend{
     font-weight: 700;
+    position: relative;
+    top: 1em;
+    text-transform: uppercase;
 }
 
 fieldset div{
