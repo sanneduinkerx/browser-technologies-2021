@@ -46,7 +46,7 @@ button {
 /***********************************/
 
 header{
-    display: flex; /* test */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -110,7 +110,7 @@ text {
 
 /* in css hidden, its shown if js is working */
 .formLayout  #svgShow {
-    display: none; /* test */
+    display: none; 
     grid-template-rows: 0fr 1fr;
 }
 
@@ -207,7 +207,7 @@ fieldset div > p, label[for=text]{
 img[src] {
     width: 100px;
     height: 50px;
-    transition: .3s ease-in-out; /* test */
+    transition: .3s ease-in-out; 
 }
 
 /* input with text field */
@@ -252,7 +252,7 @@ form button:hover,  main a:hover, form button:focus,  main a:focus{
 }
 
 form label:hover{
-    transform: translate(1.1); /* test */
+    transform: translate(1.1);
     font-weight: 700;
 }
 
@@ -328,7 +328,7 @@ fieldset label input[type=radio]:checked {
     }
 
     header{
-        flex-direction: row; /* test */
+        flex-direction: row; 
     }
     
     fieldset {
@@ -338,7 +338,7 @@ fieldset label input[type=radio]:checked {
     img[src] {
         width: 170px;
         height: 80px;
-        transition: .3s ease-in-out; /* test */
+        transition: .3s ease-in-out;
     }
 
     .errorMsg img{
@@ -355,7 +355,6 @@ fieldset label input[type=radio]:checked {
         display: grid;
         grid-template-columns: 1fr 2fr;
         justify-content: center;
-        /* align-items: center; */
     }
 
     .formBestel > h1 {

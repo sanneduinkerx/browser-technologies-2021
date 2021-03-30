@@ -1,4 +1,3 @@
-// source: https://stackabuse.com/how-to-start-a-node-server-examples-with-the-most-popular-frameworks/
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
@@ -53,7 +52,6 @@ app.post('/shirtMaker', urlencodedParser, [
 
         const errors = validationResult(req);
         if(!errors.isEmpty()){
-            // return res.status(400).json({ errors: errors.array() });
             const alert = errors.array();
             res.render('shirtMaker', {
                 alert
@@ -121,7 +119,7 @@ app.post('/bestel', urlencodedParser, [
 
     const errors = validationResult(req);
         if(!errors.isEmpty()){
-            // return res.status(400).json({ errors: errors.array() });
+           
             const alert = errors.array();
             res.render('bestel', {
                 alert,
@@ -148,7 +146,7 @@ app.post('/bestel', urlencodedParser, [
             fs.writeFile('public/data/userData.json', data, finished); 
             function finished(err){
                 console.log('all set');
-                // res.redirect(`/gegevens/${userId}`);
+        
                 res.redirect('/bevestiging')
             }
 
