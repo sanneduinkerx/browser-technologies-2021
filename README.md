@@ -2,8 +2,11 @@
 
 Bij het van Browser Technologies heb ik geleerd over progressive enhancement en hoe ik een robuuste, toegankelijk website maak. Waarbij de gebruiker de core functies kan doen.
 
+TABLE OF CONTENTS HERE
+
 # Use case: 
 **Nerdy T-shirt**
+
 *Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, opslaan, bestellen, en een volgende keer dat ik de site bezoek kunnen gebruiken.*
 
 ## Wireflow
@@ -17,6 +20,8 @@ Zie [versie 1](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/E
 
 ## De demo - Nerdy Shirt maker
 [Live demo](nerdy-shirt-maker.herokuapp.com/)
+
+IMG HERE
 
 <!-- [Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/) -->
 
@@ -58,7 +63,9 @@ IMG HERE
 
 **T-shirt updaten**
 
-Wanneer de Javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt wordt de svg niet getoont aan de gebruiker waar de updates gebeuren, ervaart de gebruiker deze pleasurable laag niet. Omdat de svg dan niet getoont wordt weet de gebruiker ook niet wat hij/zij mist en kan daarnaast alsnog de belangrijkste functies behalen. Gebruiker ziet nog steeds bij de bestelpagina hoe zijn ontwerp eruit ziet, maar mist alleen de extra ervaring.
+Wanneer de Javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt wordt de svg niet getoont aan de gebruiker waar de updates gebeuren, en ervaart de gebruiker deze pleasurable laag niet. Omdat de svg dan niet getoont wordt weet de gebruiker ook niet wat hij/zij mist en kan daarnaast alsnog de belangrijkste functies behalen. Gebruiker ziet nog steeds bij de bestelpagina hoe zijn ontwerp eruit ziet, maar mist alleen de extra ervaring.
+
+IMG HERE
 
 **LocalStorage**
 
@@ -90,22 +97,27 @@ Ik gebruikte namelijk eerst if(typeof(Storage) !== "undefined"), maar dit werktt
 
 Wat hierboven gebeurt is een test en gaat kijken of js iets kan toevoegen aan de localstorage zo ja, dan is de test True, als dat niet zo is en het failed dan geeft hij false terug en gaat er niks gebeuren.
 
+IMG HERE
+
 Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan later terug kan komen of als je per ongeluk refreshed is de data er nog steeds. Staat het wel uit dan mist de gebruiker deze ervaring, maar dat is niet heel erg omdat het geen hele lange formulieren zijn en de gebruiker kan nog steeds ontwerpen en bestellen, want de data wordt ook opgeslagen in een JSON file.
 
 ## Testen in 4 browsers:
 
-- Chrome - laptop [link here]
-- firefox - laptop [link here]
-- Chrome - Android telefoon [link here]
-- Safari IOS - Iphone 7 [link here]
+- Chrome - laptop [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen-Chrome---Laptop-%7C-macbook-pro)
+- firefox - laptop [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen-firefox---laptop-macbook-pro)
+- Chrome - Android telefoon [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-Chrome-Android---Pixel)
+- Safari IOS - Iphone 7 [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-safari-IOS---iphone-7)
 
 ## Gebruikte tools om te testen:
+- De site [caniuse.com](https://caniuse.com/)
+    om te checken wat voor features support zijn op welke browsers
 - Web developer via extensions, 
     voor het uit en aanzetten van css en js (zie de 3 lagen voor resultaat)
-    checken wanneer afbeeldingen uit staan (zie resultaten hier)
-    cookies uitzetten
-- Colorblind - checken of het nog te zien is voor mensen met kleurenblindheid (zie resultaat hier)
-- []() voor het valideren html en css (zie uitkomsten uit validatie [hier]())
+    checken wanneer afbeeldingen uit staan (zie resultaten [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#img-uit))
+    cookies uitzetten 
+- Colorblind
+    checken of het nog te zien is voor mensen met kleurenblindheid (zie resultaat [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#kleurenblind))
+- []() voor het valideren html en css (zie uitkomsten uit validatie [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Andere-tests#validatie-html-en-css))
 
 # Sources
 - [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
