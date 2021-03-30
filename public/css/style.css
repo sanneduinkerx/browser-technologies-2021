@@ -234,6 +234,18 @@ fieldset label input[type=radio]:checked {
 }
 
 /*****************************************/
+/************** ERROR VALIDATION **************/
+/***************************************/
+
+.errorMsg {
+    background-color: rgb(173, 32, 32);
+    border: white 1px solid;
+    padding: .1em;
+    text-align: center;
+    margin: .5em;
+}
+
+/*****************************************/
 /************** RESPONSIVE **************/
 /***************************************/
 /* dont forget: mobile first, in media laptop*/

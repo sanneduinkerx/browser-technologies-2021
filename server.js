@@ -2,16 +2,18 @@
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const { body, validationResult, check } = require('express-validator');
 const {v4 : uuidv4} = require('uuid')
 
 // Create Express app
 const app = express()
 const userId = uuidv4()
 const PORT = process.env.PORT || 8081; 
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
+
 // setting ejs as the view engine
 app.set('view engine', 'ejs'); 
 
@@ -36,32 +38,49 @@ app.get('/shirtMaker', function(req, res){
 });  
 
 // use app.post later, at least i know how it works, didnt have time to do more
-app.post('/shirtMaker', function(req, res){
-       //getting data from the posted form
-       const dataObj = {
-        userId,
-        userDesign: {   
-            color: `${req.body.color}`,
-            text:  `${req.body.TshirtText}`,
-            fanBaseImg: `${req.body.fanBaseImg}`
-        }
-    }
+app.post('/shirtMaker', urlencodedParser, [
+    check('color', 'Je hebt nog geen kleur gekozen')
+        .exists(),
 
-    // stringify so its readable
-    const data = JSON.stringify(dataObj, null, 2);
-    //write to file data.json
-    fs.writeFile('public/data/design.json', data, finished); 
-    function finished(err){
-        console.log('all set');
-        res.redirect('/bestel')
-    }
+    check('TshirtText', 'Vergeet niet een tekst op je shirt te zetten')
+        .exists()
+        .isLength({ min: 1 })
+
+], function(req, res){
+
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            // return res.status(400).json({ errors: errors.array() });
+            const alert = errors.array();
+            res.render('shirtMaker', {
+                alert
+            })
+        } else {
+            //getting data from the posted form
+            const dataObj = {
+                userId,
+                userDesign: {   
+                    color: `${req.body.color}`,
+                    text:  `${req.body.TshirtText}`,
+                    fanBaseImg: `${req.body.fanBaseImg}`
+                }
+            }
+
+            // stringify so its readable
+            const data = JSON.stringify(dataObj, null, 2);
+            //write to file data.json
+            fs.writeFile('public/data/design.json', data, finished); 
+            function finished(err){
+                console.log('all set');
+                res.redirect('/bestel')
+            }
+        }  
 }) 
 
 app.get('/bestel', function(req, res){
     const rawData = fs.readFileSync('public/data/design.json');
     const data = JSON.parse(rawData);
 
-    console.log(data);
     res.render('bestel', {
         color: data.userDesign.color,
         text: data.userDesign.text,

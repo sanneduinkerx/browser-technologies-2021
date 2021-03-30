@@ -54,6 +54,7 @@ Dingen die ik in de toekomst nog wil toepassen:
 # Sources
 - [https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
 - [https://www.youtube.com/watch?v=6iZiqQZBQJY](https://www.youtube.com/watch?v=6iZiqQZBQJY)
+- Express validator - [Raddy The Brand](https://raddy.co.uk/blog/node-js-form-validation-using-express-validator-and-ejs/)
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 

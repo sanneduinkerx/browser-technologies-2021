@@ -13,89 +13,106 @@
                 </g>
             </svg>
         </section>
-        <form action="/shirtMaker" method="post" id="shirtMaker">
 
-            <fieldset>
-                <legend> Ontwerp T-Shirt</legend>
-        
-                <div>
-                    <p>Kies je kleur</p>
-                    <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
-        
-                    <label for="black">
-                        <input type="radio" id="black" name="color" value="black" required>
-                        Zwart 
-                    </label>
-        
-                    <label for="white">
-                        <input type="radio" id="white" name="color" value="white">
-                        Wit
-                    </label>
-                    
-                    <label for="red">
-                        <input type="radio" id="red" name="color" value="red">
-                        Rood
-                    </label>
-        
-                    <label for="green">
-                        <input type="radio" id="green" name="color" value="green">
-                        Groen
-                    </label>
-        
-                    <label for="blue">
-                        <input type="radio" id="blue" name="color" value="blue">
-                        Blauw
-                    </label>
-        
-                    <label for="purple">
-                        <input type="radio" id="purple" name="color" value="purple">
-                        Paars
-                    </label>
-        
-                </div>
-               
-                <div>
-                    <label for="text">
-                        Wat voor tekst wil je op het Shirt? (max. 17 characters)
-                        <input type="text" id="text" name="TshirtText" required maxlength="17" size="17">
-                    </label>
-                    
-                    <p><i>Bv. 'I. AM. IRON. MAN.'</i></p>
-                </div>
-        
-                <div>
-                    <p>Voeg een afbeelding toe (optioneel)</p>
-        
-                    <!-- image source: https://commons.wikimedia.org/wiki/File:Marvel-Comics-Logo.svg -->
-                    <label for="marvel">
-                        <input type="radio" id="marvel" name="fanBaseImg" value="Marvel">
-                        <img src="/img/marvelLogo.png" alt="Marvel wit met rood logo">
-                    </label>
-        
-                    <!-- image source: https://1000merken.com/harry-potter-logo/ -->
-                    <label for="HarryPotter">
-                        <input type="radio" id="HarryPotter" name="fanBaseImg" value="HarryPotter">
-                        <img src="/img/Harry-Potter-Logo.png" alt="Harry Potter zilver logo">
-                    </label>
-        
-                    <!-- image source: https://1000logos.net/star-wars-logo/ -->
-                    <label for="StarWars">
-                        <input type="radio" id="StarWars" name="fanBaseImg" value="StarWars">
-                        <img src="/img/StarWars-logo.png" alt="Star Wars geel logo">
-                    </label>
+        <section>
+            
+            <% if(typeof alert != 'undefined') { %>
+                <% alert.forEach(function(error) { %>
+                    <div class="errorMsg" role="alert">
+                        <%= error.msg %>
+                     
+                      </div>
+                <% }) %>
+            <% } %>
+       
 
-                    <label for="noImg">
-                        <input type="radio" id="noImg" name="fanBaseImg" value="noImg">
-                        Geen afbeelding
-                    </label>
-        
-                </div>
-            </fieldset>
+            <form action="/shirtMaker" method="post" id="shirtMaker">
+
+                <fieldset>
+                    <legend> Ontwerp T-Shirt</legend>
+            
+                    <div>
+                        <p>Kies je kleur</p>
+                        <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
+            
+                        <label for="black">
+                            <input type="radio" id="black" name="color" value="black">
+                            Zwart 
+                        </label>
+            
+                        <label for="white">
+                            <input type="radio" id="white" name="color" value="white">
+                            Wit
+                        </label>
+                        
+                        <label for="red">
+                            <input type="radio" id="red" name="color" value="red">
+                            Rood
+                        </label>
+            
+                        <label for="green">
+                            <input type="radio" id="green" name="color" value="green">
+                            Groen
+                        </label>
+            
+                        <label for="blue">
+                            <input type="radio" id="blue" name="color" value="blue">
+                            Blauw
+                        </label>
+            
+                        <label for="purple">
+                            <input type="radio" id="purple" name="color" value="purple">
+                            Paars
+                        </label>
+            
+                    </div>
+                   
+                    <div>
+                        <label for="text">
+                            Wat voor tekst wil je op het Shirt? (max. 17 characters)
+                            <input type="text" id="text" name="TshirtText" maxlength="17" size="17">
+                        </label>
+                        
+                        <p><i>Bv. 'I. AM. IRON. MAN.'</i></p>
+                    </div>
+            
+                    <div>
+                        <p>Voeg een afbeelding toe (optioneel)</p>
+            
+                        <!-- image source: https://commons.wikimedia.org/wiki/File:Marvel-Comics-Logo.svg -->
+                        <label for="marvel">
+                            <input type="radio" id="marvel" name="fanBaseImg" value="Marvel">
+                            <img src="/img/marvelLogo.png" alt="Marvel wit met rood logo">
+                        </label>
+            
+                        <!-- image source: https://1000merken.com/harry-potter-logo/ -->
+                        <label for="HarryPotter">
+                            <input type="radio" id="HarryPotter" name="fanBaseImg" value="HarryPotter">
+                            <img src="/img/Harry-Potter-Logo.png" alt="Harry Potter zilver logo">
+                        </label>
+            
+                        <!-- image source: https://1000logos.net/star-wars-logo/ -->
+                        <label for="StarWars">
+                            <input type="radio" id="StarWars" name="fanBaseImg" value="StarWars">
+                            <img src="/img/StarWars-logo.png" alt="Star Wars geel logo">
+                        </label>
     
+                        <label for="noImg">
+                            <input type="radio" id="noImg" name="fanBaseImg" value="noImg">
+                            Geen afbeelding
+                        </label>
+            
+                    </div>
+                </fieldset>
         
-            <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
-        
-        </form>
+            
+                <button type="submit" form="shirtMaker" value="Submit" id="submitButton"><p>Volgende</p></button>
+            
+            </form>
+
+        </section>
+
+       
 
     </main>
 <script src="script/updateShirt.js"></script>

@@ -50,86 +50,101 @@
                 <!-- if css disabled: dan zie je nog steeds welke kleur het is, plus voor mensen die blind zijn kunnen het checken-->
         </section>
 
-                <form action="/bestel" method="post" id="info">
+        <section>
+            
+            <% if(typeof alert != 'undefined') { %>
+                <% alert.forEach(function(error) { %>
+                    <div class="errorMsg" role="alert">
+                        <%= error.msg %>
+                     
+                      </div>
+                <% }) %>
+            <% } %>
 
-                    <fieldset>
-                        <legend> Maat Shirt </legend>
-                
-                        <div>
-                            <p>Voor wie is het t-shirt?</p>
-                
-                            <label for="vrouw">
-                                <input type="radio" id="vrouw" name="type" value="vrouw" required>
-                                Vrouw
-                            </label>
-                
-                            <label for="man">
-                                <input type="radio" id="man" name="type" value="man">
-                                Man
-                            </label>
-                        </div>
+            <form action="/bestel" method="post" id="info">
 
+                <fieldset>
+                    <legend> Maat Shirt </legend>
+            
                     <div>
-                        <p>Wat is de maat voor het shirt?</p>
-                        <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
-                        
-                        
-                        <label for="extrasmall">
-                            <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
-                            XS
-                        </label>
-                        
-                       
-                        <label for="small">
-                            <input type="radio" id="small" name="size" value="small">
-                            S
+                        <p>Voor wie is het t-shirt?</p>
+            
+                        <label for="vrouw">
+                            <input type="radio" id="vrouw" name="type" value="vrouw" required>
+                            Vrouw
                         </label>
             
-                        <label for="medium">
-                            <input type="radio" id="medium" name="size" value="medium">
-                            M
-                        </label>
-            
-                        <label for="large">
-                            <input type="radio" id="large" name="size" value="large">
-                            L
-                        </label>
-            
-                        <label for="extralarge">
-                            <input type="radio" id="extralarge" name="size" value="extralarge">
-                            XL
+                        <label for="man">
+                            <input type="radio" id="man" name="type" value="man">
+                            Man
                         </label>
                     </div>
 
+                <div>
+                    <p>Wat is de maat voor het shirt?</p>
+                    <!-- source: https://developer.mozilla.org/nl/docs/Learn/Forms/How_to_structure_a_web_form -->
+                    
+                    
+                    <label for="extrasmall">
+                        <input type="radio" id="extrasmall" name="size" value="extrasmall" required>
+                        XS
+                    </label>
+                    
+                   
+                    <label for="small">
+                        <input type="radio" id="small" name="size" value="small">
+                        S
+                    </label>
+        
+                    <label for="medium">
+                        <input type="radio" id="medium" name="size" value="medium">
+                        M
+                    </label>
+        
+                    <label for="large">
+                        <input type="radio" id="large" name="size" value="large">
+                        L
+                    </label>
+        
+                    <label for="extralarge">
+                        <input type="radio" id="extralarge" name="size" value="extralarge">
+                        XL
+                    </label>
+                </div>
+
+                <div>
+                    <label for="ammount">
+                        Hoeveel wil je er bestellen?(max. is 50)
+                        <input type="number" id="ammount" name="ammount" min="0" max="50">
+                    </label>
+                   
+                </div>
+        
+            </fieldset>
+    
+                <fieldset>
+                    <legend> Gegevens</legend>
+    
                     <div>
-                        <label for="ammount">
-                            Hoeveel wil je er bestellen?(max. is 50)
-                            <input type="number" id="ammount" name="ammount" min="0" max="50">
-                        </label>
-                       
+                        <label for="text">Wat is jouw naam?</label>
+                        <input type="text" id="textFirstname" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
+                        <input type="text" id="textLastname" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
                     </div>
-            
+    
+                    <div>
+                        <label for="email">Wat is je E-mail</label>
+                        <input type="email" id="email" name="userMail">
+                    </div>
+
                 </fieldset>
-        
-                    <fieldset>
-                        <legend> Gegevens</legend>
-        
-                        <div>
-                            <label for="text">Wat is jouw naam?</label>
-                            <input type="text" id="textFirstname" name="firstname" required maxlength="50" size="25" placeholder="Voornaam">
-                            <input type="text" id="textLastname" name="surname" required maxlength="50" size="25" placeholder="Achternaam">
-                        </div>
-        
-                        <div>
-                            <label for="email">Wat is je E-mail</label>
-                            <input type="email" id="email" name="userMail">
-                        </div>
+    
+                <button type="submit" form="info" value="Submit" id="submitButton"> <p>Bestel!</p></button>
+    
+            </form>
 
-                    </fieldset>
-        
-                    <button type="submit" form="info" value="Submit" id="submitButton"> <p>Bestel!</p></button>
-        
-                </form>
+        </section>
+
+
         
     </main>
     
