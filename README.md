@@ -15,10 +15,10 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 - [Feature Detection 🕵🏼‍♀️](#feature-detection-%EF%B8%8F)
     - [T-shirt updaten 👚](#t-shirt-updaten-)
     - [LocalStorage 📀](#localstorage-)
-- [Conclusie](#conclusie)
 - [Testen in browser 🌐](#testen-in-4-browsers-)
     - [Conclusie browsers testen](#conclusie-browsers-testen)
     - [Testen Features](#testen-features)
+- [Conclusie](#conclusie)
 - [Tools  🔨](#gebruikte-tools-om-te-testen--)
 - [Bronnen 📚](#sources-)
 
@@ -42,17 +42,13 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 ## features in Demo ✨
 - Live updaten t-shirt wanneer gebruiker shirt ontwerpt
 - Localstorage - bij refreshen of later terug komen form nog steeds ingevuld
-- Data opslaan in een JSON file en ophalen op server
-- Form validatie
-- Afbeeldingen op shirt
+- Data opslaan in een JSON file en ophalen op server, voor het checken ontwerp shirt
+- Form validatie - server side, bij niet ingevuld input een error message
 
 ## Wireflow 💻
 ![](https://user-images.githubusercontent.com/60745348/112509718-05ae1080-8d91-11eb-8ca9-c49333c56346.png)
 
 Bekijk [eerste versie](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Eindopdracht#wireflow)
-<!-- versie 1: -->
-<!-- ![](https://user-images.githubusercontent.com/60745348/111474931-db26dc80-872c-11eb-9f19-ab32c5bdaf95.png)
-![](https://user-images.githubusercontent.com/60745348/111474937-dcf0a000-872c-11eb-9f03-f007e03bcb08.png) -->
 
 # De 3 lagen 🍰
 
@@ -150,21 +146,3 @@ Deze manier van werken was nieuw voor mij en om een website toegankelijk te make
 - How to start a node server? - [stackabuse](https://stackabuse.com/how-to-start-a-node-server-examples-with-the-most-popular-frameworks/?)
 - Can i use conditional statements with ejs - [stackoverlow](https://stackoverflow.com/questions/8216918/can-i-use-conditional-statements-with-ejs-templates-in-jmvc)
 - How to create html burron that acts like a link[stackoverflow](https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link)
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
