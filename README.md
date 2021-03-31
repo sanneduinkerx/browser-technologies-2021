@@ -17,6 +17,7 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
     - [LocalStorage 📀](#localstorage-)
 - [Conclusie](#conclusie)
 - [Testen in browser 🌐](#testen-in-4-browsers-)
+    -[Testen Features](#testen-features)
 - [Tools  🔨](#gebruikte-tools-om-te-testen--)
 - [Bronnen 📚](#sources-)
 
@@ -76,14 +77,14 @@ Dit is de kers op de taart, dit maakt de ervaring een geheel voor de gebruiker. 
 
 ## T-shirt updaten 👚
 
-Wanneer de Javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt wordt de svg niet getoont aan de gebruiker waar de updates gebeuren, en ervaart de gebruiker deze pleasurable laag niet. Omdat de svg dan niet getoont wordt weet de gebruiker ook niet wat hij/zij mist en kan daarnaast alsnog de belangrijkste functies behalen. Gebruiker ziet nog steeds bij de bestelpagina hoe zijn ontwerp eruit ziet, maar mist alleen de extra ervaring.
+Wanneer de javascript niet werkt of de gebruiker heeft dit zelf uitgezet dan werkt het live updaten niet, wanneer dit gebeurt wordt de svg niet getoont aan de gebruiker waar de updates gebeuren, en ervaart de gebruiker deze pleasurable laag niet. Omdat de svg dan niet getoont wordt weet de gebruiker ook niet wat hij/zij mist en kan daarnaast alsnog de belangrijkste functies behalen. Gebruiker ziet nog steeds bij de bestelpagina hoe zijn ontwerp eruit ziet, maar mist alleen de extra ervaring.
 
 ## LocalStorage 📀
 
 Het kan dus zijn dat een gebruiker cookies uit heeft staan dan werkt de localstorage niet.
 Voor localstorage heb ik de volgende code gebruikt om te testen of de gebruiker localStorage beschikbaar heeft:
 Dit stukje code heb ik gevonden via: [https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available](https://stackoverflow.com/questions/16427636/check-if-localstorage-is-available)
-Ik gebruikte namelijk eerst if(typeof(Storage) !== "undefined"), maar dit werktte niet goed.
+Ik gebruikte namelijk eerst if(typeof(Storage) !== "undefined"), maar dit werktte niet goed. Omdat deze if statement checkt of de browser zelf localstorage heeft en ik testen dit eerst met console.log en in beide gevallen gaf het aan dat de localstorage er was terwijl ik cookies uit had staan. Daarom heb ik deze functie hieronder gebruikt met wat hulp van het internet.
 
 ```
     function localStorageDetection(){
@@ -106,11 +107,11 @@ Ik gebruikte namelijk eerst if(typeof(Storage) !== "undefined"), maar dit werktt
 
 ```
 
-Wat hierboven gebeurt is een test en gaat kijken of js iets kan toevoegen aan de localstorage zo ja, dan is de test True, als dat niet zo is en het failed dan geeft hij false terug en gaat er niks gebeuren.
+Wat hierboven gebeurt is een test en gaat kijken of js iets kan toevoegen aan de localstorage zo ja, dan is de test True, als dat niet zo is en het failed dan geeft hij false terug en gaat er niks gebeuren. Dus als de try niet lukt gaat het script naar catch en geeft false aan. En in de if statement eronder geef ik dan aan is de localStorageDetection === true dan kan ik dingen in de localstorage plaatsen. 
 
 ![](https://user-images.githubusercontent.com/60745348/113051294-1d790080-91a6-11eb-9bab-6df71bdabf3e.png)
 
-Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan later terug kan komen of als je per ongeluk refreshed is de data er nog steeds. Staat het wel uit dan mist de gebruiker deze ervaring, maar dat is niet heel erg omdat het geen hele lange formulieren zijn en de gebruiker kan nog steeds ontwerpen en bestellen, want de data wordt ook opgeslagen in een JSON file.
+Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan later terug kan komen of als je per ongeluk refreshed is de data er nog steeds. Dus het is echt een enhancement. Staat het wel uit dan mist de gebruiker deze ervaring, maar dat is niet heel erg omdat het geen hele lange formulieren zijn en de gebruiker kan nog steeds ontwerpen en bestellen, want de data wordt ook opgeslagen in een JSON file.
 
 # Testen in 4 browsers 🌐
 
@@ -118,6 +119,9 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
 - firefox - laptop [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen-firefox---laptop-macbook-pro)
 - Chrome - Android telefoon [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-Chrome-Android---Pixel)
 - Safari IOS - Iphone 7 [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-safari-IOS---iphone-7)
+
+## Testen features
+Zie [hier]() ook testverslag van de features binnen mijn demo
 
 # Conclusie
 Ik heb veel geleerd binnen dit vak over het opbouwen in lagen en de manier van denken. Normaal gesproken begon ik meteen en ik heb meestal alleen chrome open om te checken of het werkt of niet maar nooit veel andere browsers om te testen. Ik ga er zelf vanuit dat iedereen wel chrome gebruikt maar dat is natuurlijk niet zo. Ik ben gewend geraakt goed te checken of iets op een bepaalde browser werkt of niet en met feature detection dus eerst te checken en een fallback als iets niet werkt. Ik checkte dus ook veel met het uitzetten van js of de functies nog werkte en bijvoorbeeld als de afbeeldingen uitstaan dat het wel duidelijk is wat er hoort te staan met alt text. Daarnaast checkte ik dus ook meer met toetsenbord en kwam daar dus ook tegen dingen aan die ik snel fix. 
