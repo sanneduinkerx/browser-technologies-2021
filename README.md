@@ -15,10 +15,13 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
 - [Feature Detection 🕵🏼‍♀️](#feature-detection-%EF%B8%8F)
     - [T-shirt updaten 👚](#t-shirt-updaten-)
     - [LocalStorage 📀](#localstorage-)
-- [Conclusie](#conclusie)
 - [Testen in browser 🌐](#testen-in-4-browsers-)
     - [Conclusie browsers testen](#conclusie-browsers-testen)
     - [Testen Features](#testen-features)
+<<<<<<< HEAD
+=======
+- [Conclusie](#conclusie)
+>>>>>>> 6810f83d6ca1ee46d342e68764b3bbcf874c1d6a
 - [Tools  🔨](#gebruikte-tools-om-te-testen--)
 - [Bronnen 📚](#sources-)
 
@@ -150,21 +153,3 @@ Deze manier van werken was nieuw voor mij en om een website toegankelijk te make
 - How to start a node server? - [stackabuse](https://stackabuse.com/how-to-start-a-node-server-examples-with-the-most-popular-frameworks/?)
 - Can i use conditional statements with ejs - [stackoverlow](https://stackoverflow.com/questions/8216918/can-i-use-conditional-statements-with-ejs-templates-in-jmvc)
 - How to create html burron that acts like a link[stackoverflow](https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link)
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
