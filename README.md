@@ -17,7 +17,8 @@ Bij het van Browser Technologies heb ik geleerd over progressive enhancement en 
     - [LocalStorage 📀](#localstorage-)
 - [Conclusie](#conclusie)
 - [Testen in browser 🌐](#testen-in-4-browsers-)
-    -[Testen Features](#testen-features)
+    - [Conclusie browsers testen](#conclusie-browsers-testen)
+    - [Testen Features](#testen-features)
 - [Tools  🔨](#gebruikte-tools-om-te-testen--)
 - [Bronnen 📚](#sources-)
 
@@ -120,8 +121,11 @@ Het is mooi meegenomen als de localstorage bij gebruiker werkt, omdat je dan lat
 - Chrome - Android telefoon [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-Chrome-Android---Pixel)
 - Safari IOS - Iphone 7 [zie test](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testen:-safari-IOS---iphone-7)
 
+## Conclusie browsers testen
+Bij firefox liep ik alleen tegen de link met toetsenbord, maar voor de rest werkte alle features op firefox en chrome op laptop. Ik had gebruik gemaakt van @media queries en begon met mobile first designing, dus als je op de telefoon het opent is de layout onder elkaar, en dat werkte ook goed. Het nadeel bij de safari ios iphone 7 test was dat omdat het scherm klein was de gebruiker geen feedback kreeg dat er een formulier onder het shirt stond, maar ik wilde niet de svg kleiner maken omdat anders de tekst niet meer leesbaar zou zijn van het shirt op de telefoon. Ook merkte ik bij de safari browser dat de error message dus ook net onder de viewport vallen dus de gebruiker moet scrollen. Bij de pixel 4 chrome browser was het betere feedback omdat het scherm langer was en kon je steeds een stukje formulier zien, en als je iets vergeten was kon je ook meteen de error messages bekijken. Dus alle belangrijkste functies werken op de 4 browsers en ik liep tegen kleine dingen aan maar alle features: refreshen, live updaten, checken ontwerp en form validatie werktte op alle 4.
+
 ## Testen features
-Zie [hier]() ook testverslag van de features binnen mijn demo
+Zie [hier](https://github.com/sanneduinkerx/browser-technologies-2021/wiki/Testverslag---features) ook testverslag van de features binnen mijn demo.
 
 # Conclusie
 Ik heb veel geleerd binnen dit vak over het opbouwen in lagen en de manier van denken. Normaal gesproken begon ik meteen en ik heb meestal alleen chrome open om te checken of het werkt of niet maar nooit veel andere browsers om te testen. Ik ga er zelf vanuit dat iedereen wel chrome gebruikt maar dat is natuurlijk niet zo. Ik ben gewend geraakt goed te checken of iets op een bepaalde browser werkt of niet en met feature detection dus eerst te checken en een fallback als iets niet werkt. Ik checkte dus ook veel met het uitzetten van js of de functies nog werkte en bijvoorbeeld als de afbeeldingen uitstaan dat het wel duidelijk is wat er hoort te staan met alt text. Daarnaast checkte ik dus ook meer met toetsenbord en kwam daar dus ook tegen dingen aan die ik snel fix. 
